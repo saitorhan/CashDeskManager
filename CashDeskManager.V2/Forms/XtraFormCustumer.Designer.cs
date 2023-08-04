@@ -59,7 +59,7 @@
             // nameLabel
             // 
             nameLabel.AutoSize = true;
-            nameLabel.Location = new System.Drawing.Point(12, 104);
+            nameLabel.Location = new System.Drawing.Point(12, 141);
             nameLabel.Name = "nameLabel";
             nameLabel.Size = new System.Drawing.Size(61, 13);
             nameLabel.TabIndex = 7;
@@ -68,7 +68,7 @@
             // phoneNumberLabel
             // 
             phoneNumberLabel.AutoSize = true;
-            phoneNumberLabel.Location = new System.Drawing.Point(12, 130);
+            phoneNumberLabel.Location = new System.Drawing.Point(12, 167);
             phoneNumberLabel.Name = "phoneNumberLabel";
             phoneNumberLabel.Size = new System.Drawing.Size(98, 13);
             phoneNumberLabel.TabIndex = 8;
@@ -77,7 +77,7 @@
             // addressLabel
             // 
             addressLabel.AutoSize = true;
-            addressLabel.Location = new System.Drawing.Point(12, 155);
+            addressLabel.Location = new System.Drawing.Point(12, 192);
             addressLabel.Name = "addressLabel";
             addressLabel.Size = new System.Drawing.Size(39, 13);
             addressLabel.TabIndex = 9;
@@ -86,7 +86,7 @@
             // descriptionLabel
             // 
             descriptionLabel.AutoSize = true;
-            descriptionLabel.Location = new System.Drawing.Point(12, 257);
+            descriptionLabel.Location = new System.Drawing.Point(12, 294);
             descriptionLabel.Name = "descriptionLabel";
             descriptionLabel.Size = new System.Drawing.Size(52, 13);
             descriptionLabel.TabIndex = 10;
@@ -105,25 +105,25 @@
             this.ribbonControl1.Pages.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPage[] {
             this.ribbonPage1});
             this.ribbonControl1.ShowPageHeadersMode = DevExpress.XtraBars.Ribbon.ShowPageHeadersMode.Hide;
-            this.ribbonControl1.Size = new System.Drawing.Size(444, 95);
+            this.ribbonControl1.Size = new System.Drawing.Size(444, 126);
             this.ribbonControl1.ToolbarLocation = DevExpress.XtraBars.Ribbon.RibbonQuickAccessToolbarLocation.Hidden;
             // 
             // barButtonItem1
             // 
             this.barButtonItem1.Caption = "Kaydet";
             this.barButtonItem1.CausesValidation = true;
-            this.barButtonItem1.Glyph = global::CashDeskManager.V2.Properties.Resources.save_16x16;
             this.barButtonItem1.Id = 1;
-            this.barButtonItem1.LargeGlyph = global::CashDeskManager.V2.Properties.Resources.save_32x32;
+            this.barButtonItem1.ImageOptions.Image = global::CashDeskManager.V2.Properties.Resources.save_16x16;
+            this.barButtonItem1.ImageOptions.LargeImage = global::CashDeskManager.V2.Properties.Resources.save_32x32;
             this.barButtonItem1.Name = "barButtonItem1";
             this.barButtonItem1.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.barButtonItem1_ItemClick);
             // 
             // barButtonItem2
             // 
             this.barButtonItem2.Caption = "İptal";
-            this.barButtonItem2.Glyph = global::CashDeskManager.V2.Properties.Resources.cancel_16x16;
             this.barButtonItem2.Id = 2;
-            this.barButtonItem2.LargeGlyph = global::CashDeskManager.V2.Properties.Resources.cancel_32x32;
+            this.barButtonItem2.ImageOptions.Image = global::CashDeskManager.V2.Properties.Resources.cancel_16x16;
+            this.barButtonItem2.ImageOptions.LargeImage = global::CashDeskManager.V2.Properties.Resources.cancel_32x32;
             this.barButtonItem2.Name = "barButtonItem2";
             this.barButtonItem2.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.barButtonItem2_ItemClick);
             // 
@@ -136,10 +136,10 @@
             // 
             // ribbonPageGroup1
             // 
+            this.ribbonPageGroup1.CaptionButtonVisible = DevExpress.Utils.DefaultBoolean.False;
             this.ribbonPageGroup1.ItemLinks.Add(this.barButtonItem1);
             this.ribbonPageGroup1.ItemLinks.Add(this.barButtonItem2);
             this.ribbonPageGroup1.Name = "ribbonPageGroup1";
-            this.ribbonPageGroup1.ShowCaptionButton = false;
             // 
             // custumerBindingSource
             // 
@@ -148,7 +148,7 @@
             // nameTextEdit
             // 
             this.nameTextEdit.DataBindings.Add(new System.Windows.Forms.Binding("EditValue", this.custumerBindingSource, "Name", true, System.Windows.Forms.DataSourceUpdateMode.Never));
-            this.nameTextEdit.Location = new System.Drawing.Point(116, 101);
+            this.nameTextEdit.Location = new System.Drawing.Point(116, 138);
             this.nameTextEdit.MenuManager = this.ribbonControl1;
             this.nameTextEdit.Name = "nameTextEdit";
             this.nameTextEdit.Size = new System.Drawing.Size(317, 20);
@@ -157,7 +157,7 @@
             // phoneNumberTextEdit
             // 
             this.phoneNumberTextEdit.DataBindings.Add(new System.Windows.Forms.Binding("EditValue", this.custumerBindingSource, "PhoneNumber", true, System.Windows.Forms.DataSourceUpdateMode.Never));
-            this.phoneNumberTextEdit.Location = new System.Drawing.Point(116, 127);
+            this.phoneNumberTextEdit.Location = new System.Drawing.Point(116, 164);
             this.phoneNumberTextEdit.MenuManager = this.ribbonControl1;
             this.phoneNumberTextEdit.Name = "phoneNumberTextEdit";
             this.phoneNumberTextEdit.Properties.Mask.EditMask = "(999) 000-0000";
@@ -168,7 +168,7 @@
             // addressMemoEdit
             // 
             this.addressMemoEdit.DataBindings.Add(new System.Windows.Forms.Binding("EditValue", this.custumerBindingSource, "Address", true, System.Windows.Forms.DataSourceUpdateMode.Never));
-            this.addressMemoEdit.Location = new System.Drawing.Point(116, 153);
+            this.addressMemoEdit.Location = new System.Drawing.Point(116, 190);
             this.addressMemoEdit.MenuManager = this.ribbonControl1;
             this.addressMemoEdit.Name = "addressMemoEdit";
             this.addressMemoEdit.Size = new System.Drawing.Size(317, 96);
@@ -177,7 +177,7 @@
             // descriptionMemoEdit
             // 
             this.descriptionMemoEdit.DataBindings.Add(new System.Windows.Forms.Binding("EditValue", this.custumerBindingSource, "Description", true, System.Windows.Forms.DataSourceUpdateMode.Never));
-            this.descriptionMemoEdit.Location = new System.Drawing.Point(116, 255);
+            this.descriptionMemoEdit.Location = new System.Drawing.Point(116, 292);
             this.descriptionMemoEdit.MenuManager = this.ribbonControl1;
             this.descriptionMemoEdit.Name = "descriptionMemoEdit";
             this.descriptionMemoEdit.Size = new System.Drawing.Size(317, 96);
@@ -188,7 +188,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoValidate = System.Windows.Forms.AutoValidate.EnableAllowFocusChange;
-            this.ClientSize = new System.Drawing.Size(444, 363);
+            this.ClientSize = new System.Drawing.Size(444, 405);
             this.Controls.Add(descriptionLabel);
             this.Controls.Add(this.descriptionMemoEdit);
             this.Controls.Add(addressLabel);
@@ -199,7 +199,7 @@
             this.Controls.Add(this.nameTextEdit);
             this.Controls.Add(this.ribbonControl1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
-            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.IconOptions.Icon = ((System.Drawing.Icon)(resources.GetObject("XtraFormCustumer.IconOptions.Icon")));
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "XtraFormCustumer";

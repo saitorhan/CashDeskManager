@@ -31,20 +31,20 @@
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(XtraFormSelectCashDesk));
             this.ribbonControl1 = new DevExpress.XtraBars.Ribbon.RibbonControl();
-            this.ribbonPage1 = new DevExpress.XtraBars.Ribbon.RibbonPage();
-            this.ribbonPageGroup1 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.barButtonItemOk = new DevExpress.XtraBars.BarButtonItem();
             this.barButtonItemCancel = new DevExpress.XtraBars.BarButtonItem();
+            this.ribbonPage1 = new DevExpress.XtraBars.Ribbon.RibbonPage();
+            this.ribbonPageGroup1 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.labelControl1 = new DevExpress.XtraEditors.LabelControl();
             this.gridLookUpEditCashDesks = new DevExpress.XtraEditors.GridLookUpEdit();
-            this.gridLookUpEdit1View = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.cashDeskBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.gridLookUpEdit1View = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.colName = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colDescription = new DevExpress.XtraGrid.Columns.GridColumn();
             ((System.ComponentModel.ISupportInitialize)(this.ribbonControl1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridLookUpEditCashDesks.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.gridLookUpEdit1View)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.cashDeskBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gridLookUpEdit1View)).BeginInit();
             this.SuspendLayout();
             // 
             // ribbonControl1
@@ -60,8 +60,25 @@
             this.ribbonControl1.Pages.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPage[] {
             this.ribbonPage1});
             this.ribbonControl1.ShowPageHeadersMode = DevExpress.XtraBars.Ribbon.ShowPageHeadersMode.Hide;
-            this.ribbonControl1.Size = new System.Drawing.Size(477, 95);
+            this.ribbonControl1.Size = new System.Drawing.Size(477, 126);
             this.ribbonControl1.ToolbarLocation = DevExpress.XtraBars.Ribbon.RibbonQuickAccessToolbarLocation.Hidden;
+            // 
+            // barButtonItemOk
+            // 
+            this.barButtonItemOk.Caption = "Kasa Seç";
+            this.barButtonItemOk.Id = 1;
+            this.barButtonItemOk.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("barButtonItemOk.ImageOptions.Image")));
+            this.barButtonItemOk.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("barButtonItemOk.ImageOptions.LargeImage")));
+            this.barButtonItemOk.Name = "barButtonItemOk";
+            this.barButtonItemOk.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.barButtonItemOk_ItemClick);
+            // 
+            // barButtonItemCancel
+            // 
+            this.barButtonItemCancel.Caption = "İptal";
+            this.barButtonItemCancel.Id = 2;
+            this.barButtonItemCancel.ImageOptions.LargeImage = global::CashDeskManager.V2.Properties.Resources.cancel_32x32;
+            this.barButtonItemCancel.Name = "barButtonItemCancel";
+            this.barButtonItemCancel.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.barButtonItemCancel_ItemClick);
             // 
             // ribbonPage1
             // 
@@ -72,31 +89,14 @@
             // 
             // ribbonPageGroup1
             // 
+            this.ribbonPageGroup1.CaptionButtonVisible = DevExpress.Utils.DefaultBoolean.False;
             this.ribbonPageGroup1.ItemLinks.Add(this.barButtonItemOk);
             this.ribbonPageGroup1.ItemLinks.Add(this.barButtonItemCancel);
             this.ribbonPageGroup1.Name = "ribbonPageGroup1";
-            this.ribbonPageGroup1.ShowCaptionButton = false;
-            // 
-            // barButtonItemOk
-            // 
-            this.barButtonItemOk.Caption = "Kasa Seç";
-            this.barButtonItemOk.Glyph = ((System.Drawing.Image)(resources.GetObject("barButtonItemOk.Glyph")));
-            this.barButtonItemOk.Id = 1;
-            this.barButtonItemOk.LargeGlyph = ((System.Drawing.Image)(resources.GetObject("barButtonItemOk.LargeGlyph")));
-            this.barButtonItemOk.Name = "barButtonItemOk";
-            this.barButtonItemOk.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.barButtonItemOk_ItemClick);
-            // 
-            // barButtonItemCancel
-            // 
-            this.barButtonItemCancel.Caption = "İptal";
-            this.barButtonItemCancel.Id = 2;
-            this.barButtonItemCancel.LargeGlyph = global::CashDeskManager.V2.Properties.Resources.cancel_32x32;
-            this.barButtonItemCancel.Name = "barButtonItemCancel";
-            this.barButtonItemCancel.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.barButtonItemCancel_ItemClick);
             // 
             // labelControl1
             // 
-            this.labelControl1.Location = new System.Drawing.Point(12, 104);
+            this.labelControl1.Location = new System.Drawing.Point(12, 144);
             this.labelControl1.Name = "labelControl1";
             this.labelControl1.Size = new System.Drawing.Size(102, 13);
             this.labelControl1.TabIndex = 1;
@@ -104,16 +104,20 @@
             // 
             // gridLookUpEditCashDesks
             // 
-            this.gridLookUpEditCashDesks.Location = new System.Drawing.Point(120, 101);
+            this.gridLookUpEditCashDesks.Location = new System.Drawing.Point(120, 141);
             this.gridLookUpEditCashDesks.MenuManager = this.ribbonControl1;
             this.gridLookUpEditCashDesks.Name = "gridLookUpEditCashDesks";
             this.gridLookUpEditCashDesks.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
             this.gridLookUpEditCashDesks.Properties.DataSource = this.cashDeskBindingSource;
             this.gridLookUpEditCashDesks.Properties.NullText = "Kasa Seçiniz";
-            this.gridLookUpEditCashDesks.Properties.View = this.gridLookUpEdit1View;
+            this.gridLookUpEditCashDesks.Properties.PopupView = this.gridLookUpEdit1View;
             this.gridLookUpEditCashDesks.Size = new System.Drawing.Size(339, 20);
             this.gridLookUpEditCashDesks.TabIndex = 2;
+            // 
+            // cashDeskBindingSource
+            // 
+            this.cashDeskBindingSource.DataSource = typeof(CashDeskManager.V2.Entity.Database.CashDesk);
             // 
             // gridLookUpEdit1View
             // 
@@ -124,10 +128,6 @@
             this.gridLookUpEdit1View.Name = "gridLookUpEdit1View";
             this.gridLookUpEdit1View.OptionsSelection.EnableAppearanceFocusedCell = false;
             this.gridLookUpEdit1View.OptionsView.ShowGroupPanel = false;
-            // 
-            // cashDeskBindingSource
-            // 
-            this.cashDeskBindingSource.DataSource = typeof(CashDeskManager.V2.Entity.Database.CashDesk);
             // 
             // colName
             // 
@@ -147,12 +147,12 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(477, 133);
+            this.ClientSize = new System.Drawing.Size(477, 170);
             this.Controls.Add(this.gridLookUpEditCashDesks);
             this.Controls.Add(this.labelControl1);
             this.Controls.Add(this.ribbonControl1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
-            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.IconOptions.Icon = ((System.Drawing.Icon)(resources.GetObject("XtraFormSelectCashDesk.IconOptions.Icon")));
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "XtraFormSelectCashDesk";
@@ -160,8 +160,8 @@
             this.Text = "İşlem Yapılacak Kasa Seçimi";
             ((System.ComponentModel.ISupportInitialize)(this.ribbonControl1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridLookUpEditCashDesks.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.gridLookUpEdit1View)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.cashDeskBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gridLookUpEdit1View)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 

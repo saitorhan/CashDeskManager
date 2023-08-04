@@ -46,8 +46,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.textEditAmount.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.comboBoxEditCurrency.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.memoEditDesc.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dateEditDateTime.Properties.CalendarTimeProperties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dateEditDateTime.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dateEditDateTime.Properties.CalendarTimeProperties)).BeginInit();
             this.SuspendLayout();
             // 
             // ribbonControl1
@@ -63,7 +63,7 @@
             this.ribbonControl1.Pages.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPage[] {
             this.ribbonPage1});
             this.ribbonControl1.ShowPageHeadersMode = DevExpress.XtraBars.Ribbon.ShowPageHeadersMode.Hide;
-            this.ribbonControl1.Size = new System.Drawing.Size(357, 95);
+            this.ribbonControl1.Size = new System.Drawing.Size(357, 126);
             this.ribbonControl1.ToolbarLocation = DevExpress.XtraBars.Ribbon.RibbonQuickAccessToolbarLocation.Hidden;
             // 
             // barButtonItemSave
@@ -71,7 +71,7 @@
             this.barButtonItemSave.Caption = "Kaydet";
             this.barButtonItemSave.CausesValidation = true;
             this.barButtonItemSave.Id = 1;
-            this.barButtonItemSave.LargeGlyph = global::CashDeskManager.V2.Properties.Resources.save_32x32;
+            this.barButtonItemSave.ImageOptions.LargeImage = global::CashDeskManager.V2.Properties.Resources.save_32x32;
             this.barButtonItemSave.Name = "barButtonItemSave";
             this.barButtonItemSave.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.barButtonItemSave_ItemClick);
             // 
@@ -79,7 +79,7 @@
             // 
             this.barButtonItemCancel.Caption = "İptal";
             this.barButtonItemCancel.Id = 2;
-            this.barButtonItemCancel.LargeGlyph = global::CashDeskManager.V2.Properties.Resources.cancel_32x32;
+            this.barButtonItemCancel.ImageOptions.LargeImage = global::CashDeskManager.V2.Properties.Resources.cancel_32x32;
             this.barButtonItemCancel.Name = "barButtonItemCancel";
             this.barButtonItemCancel.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.barButtonItemCancel_ItemClick);
             // 
@@ -92,14 +92,14 @@
             // 
             // ribbonPageGroup1
             // 
+            this.ribbonPageGroup1.CaptionButtonVisible = DevExpress.Utils.DefaultBoolean.False;
             this.ribbonPageGroup1.ItemLinks.Add(this.barButtonItemSave);
             this.ribbonPageGroup1.ItemLinks.Add(this.barButtonItemCancel);
             this.ribbonPageGroup1.Name = "ribbonPageGroup1";
-            this.ribbonPageGroup1.ShowCaptionButton = false;
             // 
             // labelControl1
             // 
-            this.labelControl1.Location = new System.Drawing.Point(12, 104);
+            this.labelControl1.Location = new System.Drawing.Point(12, 140);
             this.labelControl1.Name = "labelControl1";
             this.labelControl1.Size = new System.Drawing.Size(33, 13);
             this.labelControl1.TabIndex = 1;
@@ -107,7 +107,7 @@
             // 
             // labelControl2
             // 
-            this.labelControl2.Location = new System.Drawing.Point(12, 130);
+            this.labelControl2.Location = new System.Drawing.Point(12, 166);
             this.labelControl2.Name = "labelControl2";
             this.labelControl2.Size = new System.Drawing.Size(53, 13);
             this.labelControl2.TabIndex = 1;
@@ -115,7 +115,7 @@
             // 
             // labelControl3
             // 
-            this.labelControl3.Location = new System.Drawing.Point(12, 181);
+            this.labelControl3.Location = new System.Drawing.Point(12, 217);
             this.labelControl3.Name = "labelControl3";
             this.labelControl3.Size = new System.Drawing.Size(45, 13);
             this.labelControl3.TabIndex = 1;
@@ -123,7 +123,7 @@
             // 
             // textEditAmount
             // 
-            this.textEditAmount.Location = new System.Drawing.Point(74, 101);
+            this.textEditAmount.Location = new System.Drawing.Point(74, 137);
             this.textEditAmount.MenuManager = this.ribbonControl1;
             this.textEditAmount.Name = "textEditAmount";
             this.textEditAmount.Properties.Mask.EditMask = "f2";
@@ -134,7 +134,7 @@
             // 
             // comboBoxEditCurrency
             // 
-            this.comboBoxEditCurrency.Location = new System.Drawing.Point(74, 127);
+            this.comboBoxEditCurrency.Location = new System.Drawing.Point(74, 163);
             this.comboBoxEditCurrency.MenuManager = this.ribbonControl1;
             this.comboBoxEditCurrency.Name = "comboBoxEditCurrency";
             this.comboBoxEditCurrency.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
@@ -146,7 +146,7 @@
             // 
             // memoEditDesc
             // 
-            this.memoEditDesc.Location = new System.Drawing.Point(74, 179);
+            this.memoEditDesc.Location = new System.Drawing.Point(74, 215);
             this.memoEditDesc.MenuManager = this.ribbonControl1;
             this.memoEditDesc.Name = "memoEditDesc";
             this.memoEditDesc.Size = new System.Drawing.Size(266, 96);
@@ -156,7 +156,7 @@
             // dateEditDateTime
             // 
             this.dateEditDateTime.EditValue = null;
-            this.dateEditDateTime.Location = new System.Drawing.Point(74, 153);
+            this.dateEditDateTime.Location = new System.Drawing.Point(74, 189);
             this.dateEditDateTime.MenuManager = this.ribbonControl1;
             this.dateEditDateTime.Name = "dateEditDateTime";
             this.dateEditDateTime.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
@@ -168,7 +168,7 @@
             // 
             // labelControl4
             // 
-            this.labelControl4.Location = new System.Drawing.Point(12, 156);
+            this.labelControl4.Location = new System.Drawing.Point(12, 192);
             this.labelControl4.Name = "labelControl4";
             this.labelControl4.Size = new System.Drawing.Size(28, 13);
             this.labelControl4.TabIndex = 1;
@@ -179,7 +179,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoValidate = System.Windows.Forms.AutoValidate.EnableAllowFocusChange;
-            this.ClientSize = new System.Drawing.Size(357, 286);
+            this.ClientSize = new System.Drawing.Size(357, 324);
             this.Controls.Add(this.dateEditDateTime);
             this.Controls.Add(this.memoEditDesc);
             this.Controls.Add(this.comboBoxEditCurrency);
@@ -190,7 +190,7 @@
             this.Controls.Add(this.labelControl1);
             this.Controls.Add(this.ribbonControl1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
-            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.IconOptions.Icon = ((System.Drawing.Icon)(resources.GetObject("XtraFormCustumerDebt.IconOptions.Icon")));
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "XtraFormCustumerDebt";

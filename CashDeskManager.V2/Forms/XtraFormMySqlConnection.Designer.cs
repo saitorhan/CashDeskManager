@@ -55,7 +55,7 @@
             // 
             // labelControl1
             // 
-            this.labelControl1.Location = new System.Drawing.Point(12, 101);
+            this.labelControl1.Location = new System.Drawing.Point(12, 135);
             this.labelControl1.Name = "labelControl1";
             this.labelControl1.Size = new System.Drawing.Size(39, 13);
             this.labelControl1.TabIndex = 0;
@@ -63,7 +63,7 @@
             // 
             // labelControl2
             // 
-            this.labelControl2.Location = new System.Drawing.Point(12, 127);
+            this.labelControl2.Location = new System.Drawing.Point(12, 161);
             this.labelControl2.Name = "labelControl2";
             this.labelControl2.Size = new System.Drawing.Size(24, 13);
             this.labelControl2.TabIndex = 0;
@@ -71,7 +71,7 @@
             // 
             // labelControl3
             // 
-            this.labelControl3.Location = new System.Drawing.Point(12, 153);
+            this.labelControl3.Location = new System.Drawing.Point(12, 187);
             this.labelControl3.Name = "labelControl3";
             this.labelControl3.Size = new System.Drawing.Size(59, 13);
             this.labelControl3.TabIndex = 0;
@@ -79,7 +79,7 @@
             // 
             // labelControl4
             // 
-            this.labelControl4.Location = new System.Drawing.Point(12, 179);
+            this.labelControl4.Location = new System.Drawing.Point(12, 213);
             this.labelControl4.Name = "labelControl4";
             this.labelControl4.Size = new System.Drawing.Size(34, 13);
             this.labelControl4.TabIndex = 0;
@@ -87,7 +87,7 @@
             // 
             // labelControl5
             // 
-            this.labelControl5.Location = new System.Drawing.Point(12, 205);
+            this.labelControl5.Location = new System.Drawing.Point(12, 239);
             this.labelControl5.Name = "labelControl5";
             this.labelControl5.Size = new System.Drawing.Size(57, 13);
             this.labelControl5.TabIndex = 0;
@@ -95,21 +95,21 @@
             // 
             // textEditServer
             // 
-            this.textEditServer.Location = new System.Drawing.Point(82, 98);
+            this.textEditServer.Location = new System.Drawing.Point(82, 132);
             this.textEditServer.Name = "textEditServer";
             this.textEditServer.Size = new System.Drawing.Size(255, 20);
             this.textEditServer.TabIndex = 1;
             // 
             // textEditUser
             // 
-            this.textEditUser.Location = new System.Drawing.Point(82, 150);
+            this.textEditUser.Location = new System.Drawing.Point(82, 184);
             this.textEditUser.Name = "textEditUser";
             this.textEditUser.Size = new System.Drawing.Size(255, 20);
             this.textEditUser.TabIndex = 1;
             // 
             // textEditPort
             // 
-            this.textEditPort.Location = new System.Drawing.Point(82, 124);
+            this.textEditPort.Location = new System.Drawing.Point(82, 158);
             this.textEditPort.Name = "textEditPort";
             this.textEditPort.Properties.Mask.EditMask = "d";
             this.textEditPort.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.Numeric;
@@ -118,14 +118,14 @@
             // 
             // textEditPassword
             // 
-            this.textEditPassword.Location = new System.Drawing.Point(82, 176);
+            this.textEditPassword.Location = new System.Drawing.Point(82, 210);
             this.textEditPassword.Name = "textEditPassword";
             this.textEditPassword.Size = new System.Drawing.Size(255, 20);
             this.textEditPassword.TabIndex = 1;
             // 
             // textEditDatabase
             // 
-            this.textEditDatabase.Location = new System.Drawing.Point(82, 202);
+            this.textEditDatabase.Location = new System.Drawing.Point(82, 236);
             this.textEditDatabase.Name = "textEditDatabase";
             this.textEditDatabase.Size = new System.Drawing.Size(255, 20);
             this.textEditDatabase.TabIndex = 1;
@@ -144,24 +144,24 @@
             this.ribbonControl1.Pages.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPage[] {
             this.ribbonPage1});
             this.ribbonControl1.ShowPageHeadersMode = DevExpress.XtraBars.Ribbon.ShowPageHeadersMode.Hide;
-            this.ribbonControl1.Size = new System.Drawing.Size(348, 95);
+            this.ribbonControl1.Size = new System.Drawing.Size(348, 126);
             this.ribbonControl1.ToolbarLocation = DevExpress.XtraBars.Ribbon.RibbonQuickAccessToolbarLocation.Hidden;
             // 
             // barButtonItemSave
             // 
             this.barButtonItemSave.Caption = "Kaydet";
-            this.barButtonItemSave.Glyph = ((System.Drawing.Image)(resources.GetObject("barButtonItemSave.Glyph")));
             this.barButtonItemSave.Id = 1;
-            this.barButtonItemSave.LargeGlyph = ((System.Drawing.Image)(resources.GetObject("barButtonItemSave.LargeGlyph")));
+            this.barButtonItemSave.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("barButtonItemSave.ImageOptions.Image")));
+            this.barButtonItemSave.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("barButtonItemSave.ImageOptions.LargeImage")));
             this.barButtonItemSave.Name = "barButtonItemSave";
             this.barButtonItemSave.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.barButtonItemTest_ItemClick);
             // 
             // barButtonItemTest
             // 
             this.barButtonItemTest.Caption = "Test";
-            this.barButtonItemTest.Glyph = ((System.Drawing.Image)(resources.GetObject("barButtonItemTest.Glyph")));
             this.barButtonItemTest.Id = 2;
-            this.barButtonItemTest.LargeGlyph = ((System.Drawing.Image)(resources.GetObject("barButtonItemTest.LargeGlyph")));
+            this.barButtonItemTest.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("barButtonItemTest.ImageOptions.Image")));
+            this.barButtonItemTest.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("barButtonItemTest.ImageOptions.LargeImage")));
             this.barButtonItemTest.Name = "barButtonItemTest";
             this.barButtonItemTest.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.barButtonItemTest_ItemClick);
             // 
@@ -169,7 +169,7 @@
             // 
             this.barButtonItemCancel.Caption = "İptal";
             this.barButtonItemCancel.Id = 3;
-            this.barButtonItemCancel.LargeGlyph = global::CashDeskManager.V2.Properties.Resources.cancel_32x32;
+            this.barButtonItemCancel.ImageOptions.LargeImage = global::CashDeskManager.V2.Properties.Resources.cancel_32x32;
             this.barButtonItemCancel.Name = "barButtonItemCancel";
             this.barButtonItemCancel.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.barButtonItemCancel_ItemClick);
             // 
@@ -182,18 +182,18 @@
             // 
             // ribbonPageGroup1
             // 
+            this.ribbonPageGroup1.CaptionButtonVisible = DevExpress.Utils.DefaultBoolean.False;
             this.ribbonPageGroup1.ItemLinks.Add(this.barButtonItemSave);
             this.ribbonPageGroup1.ItemLinks.Add(this.barButtonItemTest);
             this.ribbonPageGroup1.ItemLinks.Add(this.barButtonItemCancel);
             this.ribbonPageGroup1.Name = "ribbonPageGroup1";
-            this.ribbonPageGroup1.ShowCaptionButton = false;
             this.ribbonPageGroup1.Text = "Veri Tabanı Ayarları";
             // 
             // XtraFormMySqlConnection
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(348, 233);
+            this.ClientSize = new System.Drawing.Size(348, 265);
             this.Controls.Add(this.ribbonControl1);
             this.Controls.Add(this.textEditPort);
             this.Controls.Add(this.textEditDatabase);
@@ -206,7 +206,7 @@
             this.Controls.Add(this.labelControl2);
             this.Controls.Add(this.labelControl1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
-            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.IconOptions.Icon = ((System.Drawing.Icon)(resources.GetObject("XtraFormMySqlConnection.IconOptions.Icon")));
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "XtraFormMySqlConnection";

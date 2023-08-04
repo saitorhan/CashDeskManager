@@ -63,8 +63,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.currencyUnitComboBoxEdit.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.amountTextEdit.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.descriptionMemoEdit.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.startDateDateEdit.Properties.CalendarTimeProperties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.startDateDateEdit.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.startDateDateEdit.Properties.CalendarTimeProperties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.fixedExpensePeriodComboBoxEdit.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.fixedExpensePeriodCustomDayTextEdit.Properties)).BeginInit();
             this.SuspendLayout();
@@ -72,7 +72,7 @@
             // expenseTypeLabel
             // 
             expenseTypeLabel.AutoSize = true;
-            expenseTypeLabel.Location = new System.Drawing.Point(12, 104);
+            expenseTypeLabel.Location = new System.Drawing.Point(12, 148);
             expenseTypeLabel.Name = "expenseTypeLabel";
             expenseTypeLabel.Size = new System.Drawing.Size(61, 13);
             expenseTypeLabel.TabIndex = 10;
@@ -81,7 +81,7 @@
             // currencyUnitLabel
             // 
             currencyUnitLabel.AutoSize = true;
-            currencyUnitLabel.Location = new System.Drawing.Point(12, 130);
+            currencyUnitLabel.Location = new System.Drawing.Point(12, 174);
             currencyUnitLabel.Name = "currencyUnitLabel";
             currencyUnitLabel.Size = new System.Drawing.Size(60, 13);
             currencyUnitLabel.TabIndex = 11;
@@ -90,7 +90,7 @@
             // amountLabel
             // 
             amountLabel.AutoSize = true;
-            amountLabel.Location = new System.Drawing.Point(12, 156);
+            amountLabel.Location = new System.Drawing.Point(12, 200);
             amountLabel.Name = "amountLabel";
             amountLabel.Size = new System.Drawing.Size(40, 13);
             amountLabel.TabIndex = 12;
@@ -99,7 +99,7 @@
             // descriptionLabel
             // 
             descriptionLabel.AutoSize = true;
-            descriptionLabel.Location = new System.Drawing.Point(12, 233);
+            descriptionLabel.Location = new System.Drawing.Point(12, 277);
             descriptionLabel.Name = "descriptionLabel";
             descriptionLabel.Size = new System.Drawing.Size(52, 13);
             descriptionLabel.TabIndex = 13;
@@ -108,7 +108,7 @@
             // startDateLabel
             // 
             startDateLabel.AutoSize = true;
-            startDateLabel.Location = new System.Drawing.Point(12, 336);
+            startDateLabel.Location = new System.Drawing.Point(12, 380);
             startDateLabel.Name = "startDateLabel";
             startDateLabel.Size = new System.Drawing.Size(79, 13);
             startDateLabel.TabIndex = 14;
@@ -117,7 +117,7 @@
             // fixedExpensePeriodLabel
             // 
             fixedExpensePeriodLabel.AutoSize = true;
-            fixedExpensePeriodLabel.Location = new System.Drawing.Point(12, 182);
+            fixedExpensePeriodLabel.Location = new System.Drawing.Point(12, 226);
             fixedExpensePeriodLabel.Name = "fixedExpensePeriodLabel";
             fixedExpensePeriodLabel.Size = new System.Drawing.Size(81, 13);
             fixedExpensePeriodLabel.TabIndex = 15;
@@ -126,7 +126,7 @@
             // fixedExpensePeriodCustomDayLabel
             // 
             fixedExpensePeriodCustomDayLabel.AutoSize = true;
-            fixedExpensePeriodCustomDayLabel.Location = new System.Drawing.Point(12, 208);
+            fixedExpensePeriodCustomDayLabel.Location = new System.Drawing.Point(12, 252);
             fixedExpensePeriodCustomDayLabel.Name = "fixedExpensePeriodCustomDayLabel";
             fixedExpensePeriodCustomDayLabel.Size = new System.Drawing.Size(111, 13);
             fixedExpensePeriodCustomDayLabel.TabIndex = 16;
@@ -145,25 +145,25 @@
             this.ribbonControl1.Pages.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPage[] {
             this.ribbonPage1});
             this.ribbonControl1.ShowPageHeadersMode = DevExpress.XtraBars.Ribbon.ShowPageHeadersMode.Hide;
-            this.ribbonControl1.Size = new System.Drawing.Size(406, 95);
+            this.ribbonControl1.Size = new System.Drawing.Size(406, 126);
             this.ribbonControl1.ToolbarLocation = DevExpress.XtraBars.Ribbon.RibbonQuickAccessToolbarLocation.Hidden;
             // 
             // barButtonItem1
             // 
             this.barButtonItem1.Caption = "Kaydet";
             this.barButtonItem1.CausesValidation = true;
-            this.barButtonItem1.Glyph = global::CashDeskManager.V2.Properties.Resources.save_16x16;
             this.barButtonItem1.Id = 1;
-            this.barButtonItem1.LargeGlyph = global::CashDeskManager.V2.Properties.Resources.save_32x32;
+            this.barButtonItem1.ImageOptions.Image = global::CashDeskManager.V2.Properties.Resources.save_16x16;
+            this.barButtonItem1.ImageOptions.LargeImage = global::CashDeskManager.V2.Properties.Resources.save_32x32;
             this.barButtonItem1.Name = "barButtonItem1";
             this.barButtonItem1.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.barButtonItem1_ItemClick);
             // 
             // barButtonItem2
             // 
             this.barButtonItem2.Caption = "İptal";
-            this.barButtonItem2.Glyph = global::CashDeskManager.V2.Properties.Resources.cancel_16x16;
             this.barButtonItem2.Id = 2;
-            this.barButtonItem2.LargeGlyph = global::CashDeskManager.V2.Properties.Resources.cancel_32x32;
+            this.barButtonItem2.ImageOptions.Image = global::CashDeskManager.V2.Properties.Resources.cancel_16x16;
+            this.barButtonItem2.ImageOptions.LargeImage = global::CashDeskManager.V2.Properties.Resources.cancel_32x32;
             this.barButtonItem2.Name = "barButtonItem2";
             this.barButtonItem2.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.barButtonItem2_ItemClick);
             // 
@@ -176,10 +176,10 @@
             // 
             // ribbonPageGroup1
             // 
+            this.ribbonPageGroup1.CaptionButtonVisible = DevExpress.Utils.DefaultBoolean.False;
             this.ribbonPageGroup1.ItemLinks.Add(this.barButtonItem1);
             this.ribbonPageGroup1.ItemLinks.Add(this.barButtonItem2);
             this.ribbonPageGroup1.Name = "ribbonPageGroup1";
-            this.ribbonPageGroup1.ShowCaptionButton = false;
             // 
             // fixedExpenseBindingSource
             // 
@@ -188,7 +188,7 @@
             // expenseTypeTextEdit
             // 
             this.expenseTypeTextEdit.DataBindings.Add(new System.Windows.Forms.Binding("EditValue", this.fixedExpenseBindingSource, "ExpenseType", true, System.Windows.Forms.DataSourceUpdateMode.Never));
-            this.expenseTypeTextEdit.Location = new System.Drawing.Point(129, 97);
+            this.expenseTypeTextEdit.Location = new System.Drawing.Point(129, 141);
             this.expenseTypeTextEdit.MenuManager = this.ribbonControl1;
             this.expenseTypeTextEdit.Name = "expenseTypeTextEdit";
             this.expenseTypeTextEdit.Size = new System.Drawing.Size(266, 20);
@@ -198,7 +198,7 @@
             // 
             this.currencyUnitComboBoxEdit.DataBindings.Add(new System.Windows.Forms.Binding("EditValue", this.fixedExpenseBindingSource, "CurrencyUnit", true, System.Windows.Forms.DataSourceUpdateMode.Never));
             this.currencyUnitComboBoxEdit.EditValue = CashDeskManager.V2.Entity.Enums.CurrencyUnit.TRY;
-            this.currencyUnitComboBoxEdit.Location = new System.Drawing.Point(129, 123);
+            this.currencyUnitComboBoxEdit.Location = new System.Drawing.Point(129, 167);
             this.currencyUnitComboBoxEdit.MenuManager = this.ribbonControl1;
             this.currencyUnitComboBoxEdit.Name = "currencyUnitComboBoxEdit";
             this.currencyUnitComboBoxEdit.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
@@ -215,7 +215,7 @@
             // amountTextEdit
             // 
             this.amountTextEdit.DataBindings.Add(new System.Windows.Forms.Binding("EditValue", this.fixedExpenseBindingSource, "Amount", true, System.Windows.Forms.DataSourceUpdateMode.Never));
-            this.amountTextEdit.Location = new System.Drawing.Point(129, 149);
+            this.amountTextEdit.Location = new System.Drawing.Point(129, 193);
             this.amountTextEdit.MenuManager = this.ribbonControl1;
             this.amountTextEdit.Name = "amountTextEdit";
             this.amountTextEdit.Properties.Mask.EditMask = "f2";
@@ -226,7 +226,7 @@
             // descriptionMemoEdit
             // 
             this.descriptionMemoEdit.DataBindings.Add(new System.Windows.Forms.Binding("EditValue", this.fixedExpenseBindingSource, "Description", true, System.Windows.Forms.DataSourceUpdateMode.Never));
-            this.descriptionMemoEdit.Location = new System.Drawing.Point(129, 231);
+            this.descriptionMemoEdit.Location = new System.Drawing.Point(129, 275);
             this.descriptionMemoEdit.MenuManager = this.ribbonControl1;
             this.descriptionMemoEdit.Name = "descriptionMemoEdit";
             this.descriptionMemoEdit.Size = new System.Drawing.Size(266, 96);
@@ -236,7 +236,7 @@
             // 
             this.startDateDateEdit.DataBindings.Add(new System.Windows.Forms.Binding("EditValue", this.fixedExpenseBindingSource, "StartDate", true, System.Windows.Forms.DataSourceUpdateMode.Never));
             this.startDateDateEdit.EditValue = null;
-            this.startDateDateEdit.Location = new System.Drawing.Point(129, 333);
+            this.startDateDateEdit.Location = new System.Drawing.Point(129, 377);
             this.startDateDateEdit.MenuManager = this.ribbonControl1;
             this.startDateDateEdit.Name = "startDateDateEdit";
             this.startDateDateEdit.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
@@ -249,7 +249,7 @@
             // fixedExpensePeriodComboBoxEdit
             // 
             this.fixedExpensePeriodComboBoxEdit.DataBindings.Add(new System.Windows.Forms.Binding("EditValue", this.fixedExpenseBindingSource, "FixedExpensePeriod", true, System.Windows.Forms.DataSourceUpdateMode.Never));
-            this.fixedExpensePeriodComboBoxEdit.Location = new System.Drawing.Point(129, 175);
+            this.fixedExpensePeriodComboBoxEdit.Location = new System.Drawing.Point(129, 219);
             this.fixedExpensePeriodComboBoxEdit.MenuManager = this.ribbonControl1;
             this.fixedExpensePeriodComboBoxEdit.Name = "fixedExpensePeriodComboBoxEdit";
             this.fixedExpensePeriodComboBoxEdit.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
@@ -263,7 +263,7 @@
             // 
             this.fixedExpensePeriodCustomDayTextEdit.DataBindings.Add(new System.Windows.Forms.Binding("EditValue", this.fixedExpenseBindingSource, "FixedExpensePeriodCustomDay", true, System.Windows.Forms.DataSourceUpdateMode.Never));
             this.fixedExpensePeriodCustomDayTextEdit.Enabled = false;
-            this.fixedExpensePeriodCustomDayTextEdit.Location = new System.Drawing.Point(129, 205);
+            this.fixedExpensePeriodCustomDayTextEdit.Location = new System.Drawing.Point(129, 249);
             this.fixedExpensePeriodCustomDayTextEdit.MenuManager = this.ribbonControl1;
             this.fixedExpensePeriodCustomDayTextEdit.Name = "fixedExpensePeriodCustomDayTextEdit";
             this.fixedExpensePeriodCustomDayTextEdit.Size = new System.Drawing.Size(266, 20);
@@ -274,7 +274,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoValidate = System.Windows.Forms.AutoValidate.EnableAllowFocusChange;
-            this.ClientSize = new System.Drawing.Size(406, 363);
+            this.ClientSize = new System.Drawing.Size(406, 411);
             this.Controls.Add(fixedExpensePeriodCustomDayLabel);
             this.Controls.Add(this.fixedExpensePeriodCustomDayTextEdit);
             this.Controls.Add(fixedExpensePeriodLabel);
@@ -291,7 +291,7 @@
             this.Controls.Add(this.expenseTypeTextEdit);
             this.Controls.Add(this.ribbonControl1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
-            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.IconOptions.Icon = ((System.Drawing.Icon)(resources.GetObject("XtraFormFixedExpense.IconOptions.Icon")));
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "XtraFormFixedExpense";

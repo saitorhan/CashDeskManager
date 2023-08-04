@@ -56,6 +56,7 @@
             this.gridControlTotals = new DevExpress.XtraGrid.GridControl();
             this.cashDeskActionModelBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.bandedGridView1 = new DevExpress.XtraGrid.Views.BandedGrid.BandedGridView();
+            this.gridBand1 = new DevExpress.XtraGrid.Views.BandedGrid.GridBand();
             this.colcashdesk = new DevExpress.XtraGrid.Views.BandedGrid.BandedGridColumn();
             this.colDateTime = new DevExpress.XtraGrid.Views.BandedGrid.BandedGridColumn();
             this.colPaymentMethodString = new DevExpress.XtraGrid.Views.BandedGrid.BandedGridColumn();
@@ -64,12 +65,16 @@
             this.colfixedExpense = new DevExpress.XtraGrid.Views.BandedGrid.BandedGridColumn();
             this.colFixedExpenseDesc = new DevExpress.XtraGrid.Views.BandedGrid.BandedGridColumn();
             this.colPayedFromCashDeskName = new DevExpress.XtraGrid.Views.BandedGrid.BandedGridColumn();
+            this.colPayedToCashDeskName = new DevExpress.XtraGrid.Views.BandedGrid.BandedGridColumn();
             this.colCustumerName = new DevExpress.XtraGrid.Views.BandedGrid.BandedGridColumn();
             this.colActionDirectionString = new DevExpress.XtraGrid.Views.BandedGrid.BandedGridColumn();
             this.colPaymentStatuString = new DevExpress.XtraGrid.Views.BandedGrid.BandedGridColumn();
             this.colNote = new DevExpress.XtraGrid.Views.BandedGrid.BandedGridColumn();
             this.colDescription = new DevExpress.XtraGrid.Views.BandedGrid.BandedGridColumn();
+            this.gridBand2 = new DevExpress.XtraGrid.Views.BandedGrid.GridBand();
+            this.gridBand3 = new DevExpress.XtraGrid.Views.BandedGrid.GridBand();
             this.colBankName = new DevExpress.XtraGrid.Views.BandedGrid.BandedGridColumn();
+            this.gridBand4 = new DevExpress.XtraGrid.Views.BandedGrid.GridBand();
             this.colBankBranch = new DevExpress.XtraGrid.Views.BandedGrid.BandedGridColumn();
             this.colCheckOwner = new DevExpress.XtraGrid.Views.BandedGrid.BandedGridColumn();
             this.colCheckNumber = new DevExpress.XtraGrid.Views.BandedGrid.BandedGridColumn();
@@ -132,11 +137,6 @@
             this.bandedGridColumn38 = new DevExpress.XtraGrid.Views.BandedGrid.BandedGridColumn();
             this.bandedGridColumn39 = new DevExpress.XtraGrid.Views.BandedGrid.BandedGridColumn();
             this.bandedGridColumn40 = new DevExpress.XtraGrid.Views.BandedGrid.BandedGridColumn();
-            this.colPayedToCashDeskName = new DevExpress.XtraGrid.Views.BandedGrid.BandedGridColumn();
-            this.gridBand1 = new DevExpress.XtraGrid.Views.BandedGrid.GridBand();
-            this.gridBand2 = new DevExpress.XtraGrid.Views.BandedGrid.GridBand();
-            this.gridBand3 = new DevExpress.XtraGrid.Views.BandedGrid.GridBand();
-            this.gridBand4 = new DevExpress.XtraGrid.Views.BandedGrid.GridBand();
             ((System.ComponentModel.ISupportInitialize)(this.ribbonControl1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridControlTotals)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.cashDeskActionModelBindingSource)).BeginInit();
@@ -178,25 +178,25 @@
             this.ribbonControl1.Pages.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPage[] {
             this.ribbonPage1});
             this.ribbonControl1.ShowPageHeadersMode = DevExpress.XtraBars.Ribbon.ShowPageHeadersMode.Hide;
-            this.ribbonControl1.Size = new System.Drawing.Size(994, 95);
+            this.ribbonControl1.Size = new System.Drawing.Size(994, 126);
             this.ribbonControl1.StatusBar = this.ribbonStatusBar1;
             this.ribbonControl1.ToolbarLocation = DevExpress.XtraBars.Ribbon.RibbonQuickAccessToolbarLocation.Hidden;
             // 
             // barButtonItemCashIn
             // 
             this.barButtonItemCashIn.Caption = "Para Girişi";
-            this.barButtonItemCashIn.Glyph = ((System.Drawing.Image)(resources.GetObject("barButtonItemCashIn.Glyph")));
             this.barButtonItemCashIn.Id = 1;
-            this.barButtonItemCashIn.LargeGlyph = ((System.Drawing.Image)(resources.GetObject("barButtonItemCashIn.LargeGlyph")));
+            this.barButtonItemCashIn.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("barButtonItemCashIn.ImageOptions.Image")));
+            this.barButtonItemCashIn.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("barButtonItemCashIn.ImageOptions.LargeImage")));
             this.barButtonItemCashIn.Name = "barButtonItemCashIn";
             this.barButtonItemCashIn.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.barButtonItemCashIn_ItemClick);
             // 
             // barButtonItemCashOut
             // 
             this.barButtonItemCashOut.Caption = "Para Çıkışı";
-            this.barButtonItemCashOut.Glyph = ((System.Drawing.Image)(resources.GetObject("barButtonItemCashOut.Glyph")));
             this.barButtonItemCashOut.Id = 2;
-            this.barButtonItemCashOut.LargeGlyph = ((System.Drawing.Image)(resources.GetObject("barButtonItemCashOut.LargeGlyph")));
+            this.barButtonItemCashOut.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("barButtonItemCashOut.ImageOptions.Image")));
+            this.barButtonItemCashOut.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("barButtonItemCashOut.ImageOptions.LargeImage")));
             this.barButtonItemCashOut.Name = "barButtonItemCashOut";
             this.barButtonItemCashOut.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.barButtonItemCashOut_ItemClick);
             // 
@@ -204,7 +204,7 @@
             // 
             this.barButtonItemCreditIn.Caption = "Kredi Kartı Kasa Girişi";
             this.barButtonItemCreditIn.Id = 3;
-            this.barButtonItemCreditIn.LargeGlyph = global::CashDeskManager.V2.Properties.Resources.credit_cart;
+            this.barButtonItemCreditIn.ImageOptions.LargeImage = global::CashDeskManager.V2.Properties.Resources.credit_cart;
             this.barButtonItemCreditIn.Name = "barButtonItemCreditIn";
             this.barButtonItemCreditIn.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.barButtonItemCreditIn_ItemClick);
             // 
@@ -212,7 +212,7 @@
             // 
             this.barButtonItemCreditOut.Caption = "Kredi Kartı Kasa Çıkışı";
             this.barButtonItemCreditOut.Id = 4;
-            this.barButtonItemCreditOut.LargeGlyph = global::CashDeskManager.V2.Properties.Resources.credit_cart_cancelled;
+            this.barButtonItemCreditOut.ImageOptions.LargeImage = global::CashDeskManager.V2.Properties.Resources.credit_cart_cancelled;
             this.barButtonItemCreditOut.Name = "barButtonItemCreditOut";
             this.barButtonItemCreditOut.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.barButtonItemCreditOut_ItemClick);
             // 
@@ -220,7 +220,7 @@
             // 
             this.barButtonItemDelete.Caption = "Sil";
             this.barButtonItemDelete.Id = 5;
-            this.barButtonItemDelete.LargeGlyph = global::CashDeskManager.V2.Properties.Resources.delete_32x32;
+            this.barButtonItemDelete.ImageOptions.LargeImage = global::CashDeskManager.V2.Properties.Resources.delete_32x32;
             this.barButtonItemDelete.Name = "barButtonItemDelete";
             this.barButtonItemDelete.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.barButtonItemDelete_ItemClick);
             // 
@@ -228,25 +228,25 @@
             // 
             this.barButtonItemEdit.Caption = "Düzelt";
             this.barButtonItemEdit.Id = 6;
-            this.barButtonItemEdit.LargeGlyph = global::CashDeskManager.V2.Properties.Resources.editname_32x32;
+            this.barButtonItemEdit.ImageOptions.LargeImage = global::CashDeskManager.V2.Properties.Resources.editname_32x32;
             this.barButtonItemEdit.Name = "barButtonItemEdit";
             this.barButtonItemEdit.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.barButtonItemEdit_ItemClick);
             // 
             // barButtonItemRefresh
             // 
             this.barButtonItemRefresh.Caption = "Yenile";
-            this.barButtonItemRefresh.Glyph = ((System.Drawing.Image)(resources.GetObject("barButtonItemRefresh.Glyph")));
             this.barButtonItemRefresh.Id = 7;
-            this.barButtonItemRefresh.LargeGlyph = ((System.Drawing.Image)(resources.GetObject("barButtonItemRefresh.LargeGlyph")));
+            this.barButtonItemRefresh.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("barButtonItemRefresh.ImageOptions.Image")));
+            this.barButtonItemRefresh.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("barButtonItemRefresh.ImageOptions.LargeImage")));
             this.barButtonItemRefresh.Name = "barButtonItemRefresh";
             this.barButtonItemRefresh.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.barButtonItemRefresh_ItemClick);
             // 
             // barButtonItemApprove
             // 
             this.barButtonItemApprove.Caption = "Çek Onayla";
-            this.barButtonItemApprove.Glyph = ((System.Drawing.Image)(resources.GetObject("barButtonItemApprove.Glyph")));
             this.barButtonItemApprove.Id = 8;
-            this.barButtonItemApprove.LargeGlyph = ((System.Drawing.Image)(resources.GetObject("barButtonItemApprove.LargeGlyph")));
+            this.barButtonItemApprove.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("barButtonItemApprove.ImageOptions.Image")));
+            this.barButtonItemApprove.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("barButtonItemApprove.ImageOptions.LargeImage")));
             this.barButtonItemApprove.Name = "barButtonItemApprove";
             this.barButtonItemApprove.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.barButtonItemApprove_ItemClick);
             // 
@@ -254,16 +254,16 @@
             // 
             this.barButtonItemReject.Caption = "Çek Reddet";
             this.barButtonItemReject.Id = 9;
-            this.barButtonItemReject.LargeGlyph = global::CashDeskManager.V2.Properties.Resources.cancel_32x32;
+            this.barButtonItemReject.ImageOptions.LargeImage = global::CashDeskManager.V2.Properties.Resources.cancel_32x32;
             this.barButtonItemReject.Name = "barButtonItemReject";
             this.barButtonItemReject.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.barButtonItemReject_ItemClick);
             // 
             // barButtonItemPending
             // 
             this.barButtonItemPending.Caption = "Çek Bekleme Durumuna Getir";
-            this.barButtonItemPending.Glyph = ((System.Drawing.Image)(resources.GetObject("barButtonItemPending.Glyph")));
             this.barButtonItemPending.Id = 10;
-            this.barButtonItemPending.LargeGlyph = ((System.Drawing.Image)(resources.GetObject("barButtonItemPending.LargeGlyph")));
+            this.barButtonItemPending.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("barButtonItemPending.ImageOptions.Image")));
+            this.barButtonItemPending.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("barButtonItemPending.ImageOptions.LargeImage")));
             this.barButtonItemPending.Name = "barButtonItemPending";
             this.barButtonItemPending.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.barButtonItemPending_ItemClick);
             // 
@@ -277,7 +277,7 @@
             // 
             this.barButtonItemTotals.Caption = "Kasa Toplam Hesapları";
             this.barButtonItemTotals.Id = 12;
-            this.barButtonItemTotals.LargeGlyph = global::CashDeskManager.V2.Properties.Resources.report_32x32;
+            this.barButtonItemTotals.ImageOptions.LargeImage = global::CashDeskManager.V2.Properties.Resources.report_32x32;
             this.barButtonItemTotals.Name = "barButtonItemTotals";
             // 
             // barButtonItem1
@@ -295,9 +295,9 @@
             // barButtonItemExcel
             // 
             this.barButtonItemExcel.Caption = "Excele Aktar";
-            this.barButtonItemExcel.Glyph = ((System.Drawing.Image)(resources.GetObject("barButtonItemExcel.Glyph")));
             this.barButtonItemExcel.Id = 15;
-            this.barButtonItemExcel.LargeGlyph = ((System.Drawing.Image)(resources.GetObject("barButtonItemExcel.LargeGlyph")));
+            this.barButtonItemExcel.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("barButtonItemExcel.ImageOptions.Image")));
+            this.barButtonItemExcel.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("barButtonItemExcel.ImageOptions.LargeImage")));
             this.barButtonItemExcel.Name = "barButtonItemExcel";
             this.barButtonItemExcel.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.barButtonItemExcel_ItemClick);
             // 
@@ -314,42 +314,42 @@
             // 
             // ribbonPageGroup3
             // 
+            this.ribbonPageGroup3.CaptionButtonVisible = DevExpress.Utils.DefaultBoolean.False;
             this.ribbonPageGroup3.ItemLinks.Add(this.barButtonItemDelete);
             this.ribbonPageGroup3.ItemLinks.Add(this.barButtonItemEdit);
             this.ribbonPageGroup3.Name = "ribbonPageGroup3";
-            this.ribbonPageGroup3.ShowCaptionButton = false;
             this.ribbonPageGroup3.Text = "Genel Kasa İşlemleri";
             // 
             // ribbonPageGroup1
             // 
+            this.ribbonPageGroup1.CaptionButtonVisible = DevExpress.Utils.DefaultBoolean.False;
             this.ribbonPageGroup1.ItemLinks.Add(this.barButtonItemCashIn);
             this.ribbonPageGroup1.ItemLinks.Add(this.barButtonItemCashOut);
             this.ribbonPageGroup1.Name = "ribbonPageGroup1";
-            this.ribbonPageGroup1.ShowCaptionButton = false;
             this.ribbonPageGroup1.Text = "Nakit İşlemleri";
             // 
             // ribbonPageGroupCheck
             // 
+            this.ribbonPageGroupCheck.CaptionButtonVisible = DevExpress.Utils.DefaultBoolean.False;
             this.ribbonPageGroupCheck.ItemLinks.Add(this.barButtonItemApprove);
             this.ribbonPageGroupCheck.ItemLinks.Add(this.barButtonItemReject);
             this.ribbonPageGroupCheck.ItemLinks.Add(this.barButtonItemPending);
             this.ribbonPageGroupCheck.Name = "ribbonPageGroupCheck";
-            this.ribbonPageGroupCheck.ShowCaptionButton = false;
             this.ribbonPageGroupCheck.Text = "Çek İşlemleri";
             // 
             // ribbonPageGroup2
             // 
+            this.ribbonPageGroup2.CaptionButtonVisible = DevExpress.Utils.DefaultBoolean.False;
             this.ribbonPageGroup2.ItemLinks.Add(this.barButtonItemRefresh);
             this.ribbonPageGroup2.ItemLinks.Add(this.barButtonItemTotals);
             this.ribbonPageGroup2.Name = "ribbonPageGroup2";
-            this.ribbonPageGroup2.ShowCaptionButton = false;
             this.ribbonPageGroup2.Text = "Genel";
             // 
             // ribbonPageGroupExport
             // 
+            this.ribbonPageGroupExport.CaptionButtonVisible = DevExpress.Utils.DefaultBoolean.False;
             this.ribbonPageGroupExport.ItemLinks.Add(this.barButtonItemExcel);
             this.ribbonPageGroupExport.Name = "ribbonPageGroupExport";
-            this.ribbonPageGroupExport.ShowCaptionButton = false;
             this.ribbonPageGroupExport.Text = "Dışarı Aktar";
             // 
             // ribbonStatusBar1
@@ -367,7 +367,7 @@
             this.gridControlTotals.MainView = this.bandedGridView1;
             this.gridControlTotals.MenuManager = this.ribbonControl1;
             this.gridControlTotals.Name = "gridControlTotals";
-            this.gridControlTotals.Size = new System.Drawing.Size(845, 527);
+            this.gridControlTotals.Size = new System.Drawing.Size(824, 483);
             this.gridControlTotals.TabIndex = 2;
             this.gridControlTotals.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.bandedGridView1});
@@ -411,6 +411,27 @@
             this.bandedGridView1.OptionsView.ColumnAutoWidth = false;
             this.bandedGridView1.VertScrollVisibility = DevExpress.XtraGrid.Views.Base.ScrollVisibility.Always;
             this.bandedGridView1.RowStyle += new DevExpress.XtraGrid.Views.Grid.RowStyleEventHandler(this.bandedGridView1_RowStyle);
+            // 
+            // gridBand1
+            // 
+            this.gridBand1.Caption = "Genel Bilgiler";
+            this.gridBand1.Columns.Add(this.colcashdesk);
+            this.gridBand1.Columns.Add(this.colDateTime);
+            this.gridBand1.Columns.Add(this.colPaymentMethodString);
+            this.gridBand1.Columns.Add(this.colAmount);
+            this.gridBand1.Columns.Add(this.colCurrencyUnit);
+            this.gridBand1.Columns.Add(this.colfixedExpense);
+            this.gridBand1.Columns.Add(this.colFixedExpenseDesc);
+            this.gridBand1.Columns.Add(this.colPayedFromCashDeskName);
+            this.gridBand1.Columns.Add(this.colPayedToCashDeskName);
+            this.gridBand1.Columns.Add(this.colCustumerName);
+            this.gridBand1.Columns.Add(this.colActionDirectionString);
+            this.gridBand1.Columns.Add(this.colPaymentStatuString);
+            this.gridBand1.Columns.Add(this.colNote);
+            this.gridBand1.Columns.Add(this.colDescription);
+            this.gridBand1.Name = "gridBand1";
+            this.gridBand1.VisibleIndex = 0;
+            this.gridBand1.Width = 1050;
             // 
             // colcashdesk
             // 
@@ -461,6 +482,12 @@
             this.colPayedFromCashDeskName.Name = "colPayedFromCashDeskName";
             this.colPayedFromCashDeskName.Visible = true;
             // 
+            // colPayedToCashDeskName
+            // 
+            this.colPayedToCashDeskName.FieldName = "PayedToCashDeskName";
+            this.colPayedToCashDeskName.Name = "colPayedToCashDeskName";
+            this.colPayedToCashDeskName.Visible = true;
+            // 
             // colCustumerName
             // 
             this.colCustumerName.FieldName = "CustumerName";
@@ -494,11 +521,42 @@
             this.colDescription.Name = "colDescription";
             this.colDescription.Visible = true;
             // 
+            // gridBand2
+            // 
+            this.gridBand2.Caption = "Çek ve Kredi Kartı Bilgleri";
+            this.gridBand2.Children.AddRange(new DevExpress.XtraGrid.Views.BandedGrid.GridBand[] {
+            this.gridBand3,
+            this.gridBand4});
+            this.gridBand2.Name = "gridBand2";
+            this.gridBand2.VisibleIndex = 1;
+            this.gridBand2.Width = 525;
+            // 
+            // gridBand3
+            // 
+            this.gridBand3.Caption = "Kredi Kartı";
+            this.gridBand3.Columns.Add(this.colBankName);
+            this.gridBand3.Name = "gridBand3";
+            this.gridBand3.VisibleIndex = 0;
+            this.gridBand3.Width = 75;
+            // 
             // colBankName
             // 
             this.colBankName.FieldName = "BankName";
             this.colBankName.Name = "colBankName";
             this.colBankName.Visible = true;
+            // 
+            // gridBand4
+            // 
+            this.gridBand4.Caption = "Çek";
+            this.gridBand4.Columns.Add(this.colBankBranch);
+            this.gridBand4.Columns.Add(this.colCheckOwner);
+            this.gridBand4.Columns.Add(this.colCheckNumber);
+            this.gridBand4.Columns.Add(this.colAccountNumber);
+            this.gridBand4.Columns.Add(this.colSignDateTime);
+            this.gridBand4.Columns.Add(this.colExpirtyDateTime);
+            this.gridBand4.Name = "gridBand4";
+            this.gridBand4.VisibleIndex = 1;
+            this.gridBand4.Width = 450;
             // 
             // colBankBranch
             // 
@@ -542,16 +600,15 @@
             this.navigationPane1.Controls.Add(this.navigationPageTotalIns);
             this.navigationPane1.Controls.Add(this.navigationPageTotalOuts);
             this.navigationPane1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.navigationPane1.Location = new System.Drawing.Point(0, 95);
+            this.navigationPane1.Location = new System.Drawing.Point(0, 126);
             this.navigationPane1.Name = "navigationPane1";
             this.navigationPane1.Pages.AddRange(new DevExpress.XtraBars.Navigation.NavigationPageBase[] {
             this.navigationPageTotalCashes,
             this.navigationPageTotalIns,
             this.navigationPageTotalOuts});
-            this.navigationPane1.RegularSize = new System.Drawing.Size(994, 587);
+            this.navigationPane1.RegularSize = new System.Drawing.Size(994, 556);
             this.navigationPane1.SelectedPage = this.navigationPageTotalCashes;
-            this.navigationPane1.SelectedPageIndex = 0;
-            this.navigationPane1.Size = new System.Drawing.Size(994, 587);
+            this.navigationPane1.Size = new System.Drawing.Size(994, 556);
             this.navigationPane1.TabIndex = 5;
             this.navigationPane1.Text = "Kasa Hareketleri";
             this.navigationPane1.SelectedPageIndexChanged += new System.EventHandler(this.navigationPane1_SelectedPageIndexChanged);
@@ -561,7 +618,7 @@
             this.navigationPageTotalCashes.Caption = "Toplam Kasa Hareketleri";
             this.navigationPageTotalCashes.Controls.Add(this.gridControlTotals);
             this.navigationPageTotalCashes.Name = "navigationPageTotalCashes";
-            this.navigationPageTotalCashes.Size = new System.Drawing.Size(845, 527);
+            this.navigationPageTotalCashes.Size = new System.Drawing.Size(824, 483);
             // 
             // navigationPageTotalIns
             // 
@@ -1025,64 +1082,6 @@
             this.bandedGridColumn40.Name = "bandedGridColumn40";
             this.bandedGridColumn40.Visible = true;
             // 
-            // colPayedToCashDeskName
-            // 
-            this.colPayedToCashDeskName.FieldName = "PayedToCashDeskName";
-            this.colPayedToCashDeskName.Name = "colPayedToCashDeskName";
-            this.colPayedToCashDeskName.Visible = true;
-            // 
-            // gridBand1
-            // 
-            this.gridBand1.Caption = "Genel Bilgiler";
-            this.gridBand1.Columns.Add(this.colcashdesk);
-            this.gridBand1.Columns.Add(this.colDateTime);
-            this.gridBand1.Columns.Add(this.colPaymentMethodString);
-            this.gridBand1.Columns.Add(this.colAmount);
-            this.gridBand1.Columns.Add(this.colCurrencyUnit);
-            this.gridBand1.Columns.Add(this.colfixedExpense);
-            this.gridBand1.Columns.Add(this.colFixedExpenseDesc);
-            this.gridBand1.Columns.Add(this.colPayedFromCashDeskName);
-            this.gridBand1.Columns.Add(this.colPayedToCashDeskName);
-            this.gridBand1.Columns.Add(this.colCustumerName);
-            this.gridBand1.Columns.Add(this.colActionDirectionString);
-            this.gridBand1.Columns.Add(this.colPaymentStatuString);
-            this.gridBand1.Columns.Add(this.colNote);
-            this.gridBand1.Columns.Add(this.colDescription);
-            this.gridBand1.Name = "gridBand1";
-            this.gridBand1.VisibleIndex = 0;
-            this.gridBand1.Width = 1050;
-            // 
-            // gridBand2
-            // 
-            this.gridBand2.Caption = "Çek ve Kredi Kartı Bilgleri";
-            this.gridBand2.Children.AddRange(new DevExpress.XtraGrid.Views.BandedGrid.GridBand[] {
-            this.gridBand3,
-            this.gridBand4});
-            this.gridBand2.Name = "gridBand2";
-            this.gridBand2.VisibleIndex = 1;
-            this.gridBand2.Width = 525;
-            // 
-            // gridBand3
-            // 
-            this.gridBand3.Caption = "Kredi Kartı";
-            this.gridBand3.Columns.Add(this.colBankName);
-            this.gridBand3.Name = "gridBand3";
-            this.gridBand3.VisibleIndex = 0;
-            this.gridBand3.Width = 75;
-            // 
-            // gridBand4
-            // 
-            this.gridBand4.Caption = "Çek";
-            this.gridBand4.Columns.Add(this.colBankBranch);
-            this.gridBand4.Columns.Add(this.colCheckOwner);
-            this.gridBand4.Columns.Add(this.colCheckNumber);
-            this.gridBand4.Columns.Add(this.colAccountNumber);
-            this.gridBand4.Columns.Add(this.colSignDateTime);
-            this.gridBand4.Columns.Add(this.colExpirtyDateTime);
-            this.gridBand4.Name = "gridBand4";
-            this.gridBand4.VisibleIndex = 1;
-            this.gridBand4.Width = 450;
-            // 
             // XtraFormCashDeskActions
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -1091,7 +1090,7 @@
             this.Controls.Add(this.navigationPane1);
             this.Controls.Add(this.ribbonStatusBar1);
             this.Controls.Add(this.ribbonControl1);
-            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.IconOptions.Icon = ((System.Drawing.Icon)(resources.GetObject("XtraFormCashDeskActions.IconOptions.Icon")));
             this.Name = "XtraFormCashDeskActions";
             this.Text = "Kasa Hareketleri";
             this.Load += new System.EventHandler(this.XtraFormCashDeskActions_Load);
