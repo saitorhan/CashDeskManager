@@ -10,8 +10,9 @@ namespace CashDeskManager.V2.Entity
     [DbConfigurationType(typeof(MySqlEFConfiguration))]
     public class CashDeskContext : DbContext
     {
-        public static CashDeskContext DeskContext =>  new CashDeskContext();
+        private static CashDeskContext cashDeskContext;
 
+        public static CashDeskContext DeskContext => cashDeskContext ?? (cashDeskContext = new CashDeskContext());
         public CashDeskContext()
         {
             System.Data.Entity.Database.SetInitializer(new MigrateDatabaseToLatestVersion<CashDeskContext, Configuration>());
