@@ -264,9 +264,9 @@
             // dateTimePickerExpiriyDate
             // 
             this.dateTimePickerExpiriyDate.Enabled = false;
-            this.dateTimePickerExpiriyDate.Location = new System.Drawing.Point(135, 267);
+            this.dateTimePickerExpiriyDate.Location = new System.Drawing.Point(143, 267);
             this.dateTimePickerExpiriyDate.Name = "dateTimePickerExpiriyDate";
-            this.dateTimePickerExpiriyDate.Size = new System.Drawing.Size(335, 21);
+            this.dateTimePickerExpiriyDate.Size = new System.Drawing.Size(327, 21);
             this.dateTimePickerExpiriyDate.TabIndex = 4;
             // 
             // checkEditHasExpiriy

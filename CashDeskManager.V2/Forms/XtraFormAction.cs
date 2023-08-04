@@ -138,6 +138,9 @@ namespace CashDeskManager.V2.Forms
         {
             xtraTabControlExtraInfos.Enabled = radioGroupPaymentMethod.SelectedIndex > 0;
             xtraTabControlExtraInfos.SelectedTabPageIndex = radioGroupPaymentMethod.SelectedIndex > 0 ? radioGroupPaymentMethod.SelectedIndex - 1 : 0;
+
+           xtraTabPageCreditCard.PageVisible = radioGroupPaymentMethod.SelectedIndex == 1;
+           xtraTabPageCheck.PageVisible = radioGroupPaymentMethod.SelectedIndex == 2;
         }
 
         private void textEditAmount_Validating(object sender, CancelEventArgs e)

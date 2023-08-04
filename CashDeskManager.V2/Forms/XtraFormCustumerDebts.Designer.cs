@@ -44,8 +44,6 @@
             this.gridControlDebts = new DevExpress.XtraGrid.GridControl();
             this.custumerDebtBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.gridView1 = new DevExpress.XtraGrid.Views.Grid.GridView();
-            this.colId = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.colCustumerId = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colCurrencyUnit = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colAmount = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colDateTime = new DevExpress.XtraGrid.Columns.GridColumn();
@@ -76,7 +74,7 @@
             this.ribbonControl1.Pages.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPage[] {
             this.ribbonPage1});
             this.ribbonControl1.ShowPageHeadersMode = DevExpress.XtraBars.Ribbon.ShowPageHeadersMode.Hide;
-            this.ribbonControl1.Size = new System.Drawing.Size(984, 95);
+            this.ribbonControl1.Size = new System.Drawing.Size(984, 126);
             this.ribbonControl1.StatusBar = this.ribbonStatusBar1;
             this.ribbonControl1.ToolbarLocation = DevExpress.XtraBars.Ribbon.RibbonQuickAccessToolbarLocation.Hidden;
             // 
@@ -84,7 +82,7 @@
             // 
             this.barButtonItemNewDebt.Caption = "Borç Ekle";
             this.barButtonItemNewDebt.Id = 1;
-            this.barButtonItemNewDebt.LargeGlyph = global::CashDeskManager.V2.Properties.Resources.add_32x32;
+            this.barButtonItemNewDebt.ImageOptions.LargeImage = global::CashDeskManager.V2.Properties.Resources.add_32x32;
             this.barButtonItemNewDebt.Name = "barButtonItemNewDebt";
             this.barButtonItemNewDebt.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.barButtonItemNewDebt_ItemClick);
             // 
@@ -97,7 +95,7 @@
             // 
             this.barButtonItemCash.Caption = "Tahsilat Yap";
             this.barButtonItemCash.Id = 3;
-            this.barButtonItemCash.LargeGlyph = global::CashDeskManager.V2.Properties.Resources.calculator;
+            this.barButtonItemCash.ImageOptions.LargeImage = global::CashDeskManager.V2.Properties.Resources.calculator;
             this.barButtonItemCash.Name = "barButtonItemCash";
             this.barButtonItemCash.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.barButtonItemCash_ItemClick);
             // 
@@ -105,7 +103,7 @@
             // 
             this.barButtonItemEdit.Caption = "Borç Düzenleme";
             this.barButtonItemEdit.Id = 6;
-            this.barButtonItemEdit.LargeGlyph = global::CashDeskManager.V2.Properties.Resources.editname_32x32;
+            this.barButtonItemEdit.ImageOptions.LargeImage = global::CashDeskManager.V2.Properties.Resources.editname_32x32;
             this.barButtonItemEdit.Name = "barButtonItemEdit";
             this.barButtonItemEdit.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.barButtonItemEdit_ItemClick);
             // 
@@ -113,7 +111,7 @@
             // 
             this.barButtonItemDelete.Caption = "Borç Silme";
             this.barButtonItemDelete.Id = 7;
-            this.barButtonItemDelete.LargeGlyph = global::CashDeskManager.V2.Properties.Resources.delete_32x32;
+            this.barButtonItemDelete.ImageOptions.LargeImage = global::CashDeskManager.V2.Properties.Resources.delete_32x32;
             this.barButtonItemDelete.Name = "barButtonItemDelete";
             this.barButtonItemDelete.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.barButtonItemDelete_ItemClick);
             // 
@@ -121,9 +119,9 @@
             // 
             this.barButtonItemAllCashes.Caption = "Ödemeleri Görüntüle";
             this.barButtonItemAllCashes.Enabled = false;
-            this.barButtonItemAllCashes.Glyph = global::CashDeskManager.V2.Properties.Resources.report_16x16;
             this.barButtonItemAllCashes.Id = 8;
-            this.barButtonItemAllCashes.LargeGlyph = global::CashDeskManager.V2.Properties.Resources.report_32x32;
+            this.barButtonItemAllCashes.ImageOptions.Image = global::CashDeskManager.V2.Properties.Resources.report_16x16;
+            this.barButtonItemAllCashes.ImageOptions.LargeImage = global::CashDeskManager.V2.Properties.Resources.report_32x32;
             this.barButtonItemAllCashes.Name = "barButtonItemAllCashes";
             this.barButtonItemAllCashes.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.barButtonItemAllCashes_ItemClick);
             // 
@@ -137,19 +135,19 @@
             // 
             // ribbonPageGroup1
             // 
+            this.ribbonPageGroup1.CaptionButtonVisible = DevExpress.Utils.DefaultBoolean.False;
             this.ribbonPageGroup1.ItemLinks.Add(this.barButtonItemNewDebt);
             this.ribbonPageGroup1.ItemLinks.Add(this.barButtonItemEdit);
             this.ribbonPageGroup1.ItemLinks.Add(this.barButtonItemDelete);
             this.ribbonPageGroup1.Name = "ribbonPageGroup1";
-            this.ribbonPageGroup1.ShowCaptionButton = false;
             this.ribbonPageGroup1.Text = "Borç İşlemleri";
             // 
             // ribbonPageGroup2
             // 
+            this.ribbonPageGroup2.CaptionButtonVisible = DevExpress.Utils.DefaultBoolean.False;
             this.ribbonPageGroup2.ItemLinks.Add(this.barButtonItemCash);
             this.ribbonPageGroup2.ItemLinks.Add(this.barButtonItemAllCashes);
             this.ribbonPageGroup2.Name = "ribbonPageGroup2";
-            this.ribbonPageGroup2.ShowCaptionButton = false;
             this.ribbonPageGroup2.Text = "Ödeme İşlemleri";
             // 
             // ribbonStatusBar1
@@ -163,11 +161,11 @@
             // 
             this.gridControlDebts.DataSource = this.custumerDebtBindingSource;
             this.gridControlDebts.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.gridControlDebts.Location = new System.Drawing.Point(0, 95);
+            this.gridControlDebts.Location = new System.Drawing.Point(0, 126);
             this.gridControlDebts.MainView = this.gridView1;
             this.gridControlDebts.MenuManager = this.ribbonControl1;
             this.gridControlDebts.Name = "gridControlDebts";
-            this.gridControlDebts.Size = new System.Drawing.Size(984, 539);
+            this.gridControlDebts.Size = new System.Drawing.Size(984, 508);
             this.gridControlDebts.TabIndex = 2;
             this.gridControlDebts.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridView1});
@@ -180,8 +178,6 @@
             // gridView1
             // 
             this.gridView1.Columns.AddRange(new DevExpress.XtraGrid.Columns.GridColumn[] {
-            this.colId,
-            this.colCustumerId,
             this.colCurrencyUnit,
             this.colAmount,
             this.colDateTime,
@@ -194,68 +190,54 @@
             this.gridView1.OptionsBehavior.Editable = false;
             this.gridView1.CustomColumnDisplayText += new DevExpress.XtraGrid.Views.Base.CustomColumnDisplayTextEventHandler(this.gridView1_CustomColumnDisplayText);
             // 
-            // colId
-            // 
-            this.colId.FieldName = "Id";
-            this.colId.Name = "colId";
-            this.colId.Visible = true;
-            this.colId.VisibleIndex = 0;
-            // 
-            // colCustumerId
-            // 
-            this.colCustumerId.FieldName = "CustumerId";
-            this.colCustumerId.Name = "colCustumerId";
-            this.colCustumerId.Visible = true;
-            this.colCustumerId.VisibleIndex = 1;
-            // 
             // colCurrencyUnit
             // 
             this.colCurrencyUnit.FieldName = "CurrencyUnit";
             this.colCurrencyUnit.Name = "colCurrencyUnit";
             this.colCurrencyUnit.Visible = true;
-            this.colCurrencyUnit.VisibleIndex = 2;
+            this.colCurrencyUnit.VisibleIndex = 0;
             // 
             // colAmount
             // 
             this.colAmount.FieldName = "Amount";
             this.colAmount.Name = "colAmount";
             this.colAmount.Visible = true;
-            this.colAmount.VisibleIndex = 3;
+            this.colAmount.VisibleIndex = 1;
             // 
             // colDateTime
             // 
             this.colDateTime.FieldName = "DateTime";
             this.colDateTime.Name = "colDateTime";
             this.colDateTime.Visible = true;
-            this.colDateTime.VisibleIndex = 4;
+            this.colDateTime.VisibleIndex = 2;
             // 
             // colDescription
             // 
             this.colDescription.FieldName = "Description";
             this.colDescription.Name = "colDescription";
             this.colDescription.Visible = true;
-            this.colDescription.VisibleIndex = 5;
+            this.colDescription.VisibleIndex = 3;
             // 
             // colPayStatu
             // 
             this.colPayStatu.FieldName = "PayStatu";
             this.colPayStatu.Name = "colPayStatu";
             this.colPayStatu.Visible = true;
-            this.colPayStatu.VisibleIndex = 6;
+            this.colPayStatu.VisibleIndex = 4;
             // 
             // colRemainingAmount
             // 
             this.colRemainingAmount.FieldName = "RemainingAmount";
             this.colRemainingAmount.Name = "colRemainingAmount";
             this.colRemainingAmount.Visible = true;
-            this.colRemainingAmount.VisibleIndex = 7;
+            this.colRemainingAmount.VisibleIndex = 5;
             // 
             // colCustumer
             // 
             this.colCustumer.FieldName = "Custumer";
             this.colCustumer.Name = "colCustumer";
             this.colCustumer.Visible = true;
-            this.colCustumer.VisibleIndex = 8;
+            this.colCustumer.VisibleIndex = 6;
             // 
             // XtraFormCustumerDebts
             // 
@@ -265,7 +247,7 @@
             this.Controls.Add(this.gridControlDebts);
             this.Controls.Add(this.ribbonStatusBar1);
             this.Controls.Add(this.ribbonControl1);
-            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.IconOptions.Icon = ((System.Drawing.Icon)(resources.GetObject("XtraFormCustumerDebts.IconOptions.Icon")));
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "XtraFormCustumerDebts";
@@ -296,8 +278,6 @@
         private DevExpress.XtraGrid.GridControl gridControlDebts;
         private System.Windows.Forms.BindingSource custumerDebtBindingSource;
         private DevExpress.XtraGrid.Views.Grid.GridView gridView1;
-        private DevExpress.XtraGrid.Columns.GridColumn colId;
-        private DevExpress.XtraGrid.Columns.GridColumn colCustumerId;
         private DevExpress.XtraGrid.Columns.GridColumn colCurrencyUnit;
         private DevExpress.XtraGrid.Columns.GridColumn colAmount;
         private DevExpress.XtraGrid.Columns.GridColumn colDateTime;

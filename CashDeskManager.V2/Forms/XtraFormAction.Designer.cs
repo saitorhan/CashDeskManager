@@ -80,8 +80,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.cashDeskBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridLookUpEdit1View)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.memoEditDesc.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dateEditDateTime.Properties.CalendarTimeProperties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dateEditDateTime.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dateEditDateTime.Properties.CalendarTimeProperties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.textEditAmount.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.comboBoxEditCurrencyUnit.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.groupControlExtraInfo)).BeginInit();
@@ -91,10 +91,10 @@
             this.xtraTabPageCreditCard.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.textEditCreditBank.Properties)).BeginInit();
             this.xtraTabPageCheck.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dateEditSignDate.Properties.CalendarTimeProperties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dateEditSignDate.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dateEditExpiriyDate.Properties.CalendarTimeProperties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dateEditSignDate.Properties.CalendarTimeProperties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dateEditExpiriyDate.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dateEditExpiriyDate.Properties.CalendarTimeProperties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.textEditCheckAccount.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.textEditCheckNumber.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.textEditCheckOwnerName.Properties)).BeginInit();
@@ -118,7 +118,7 @@
             this.ribbonControl1.Pages.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPage[] {
             this.ribbonPage1});
             this.ribbonControl1.ShowPageHeadersMode = DevExpress.XtraBars.Ribbon.ShowPageHeadersMode.Hide;
-            this.ribbonControl1.Size = new System.Drawing.Size(745, 95);
+            this.ribbonControl1.Size = new System.Drawing.Size(745, 126);
             this.ribbonControl1.ToolbarLocation = DevExpress.XtraBars.Ribbon.RibbonQuickAccessToolbarLocation.Hidden;
             // 
             // barButtonItemSave
@@ -126,7 +126,7 @@
             this.barButtonItemSave.Caption = "Kaydet";
             this.barButtonItemSave.CausesValidation = true;
             this.barButtonItemSave.Id = 1;
-            this.barButtonItemSave.LargeGlyph = global::CashDeskManager.V2.Properties.Resources.save_32x32;
+            this.barButtonItemSave.ImageOptions.LargeImage = global::CashDeskManager.V2.Properties.Resources.save_32x32;
             this.barButtonItemSave.Name = "barButtonItemSave";
             this.barButtonItemSave.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.barButtonItemSave_ItemClick);
             // 
@@ -134,7 +134,7 @@
             // 
             this.barButtonItemCancel.Caption = "İptal";
             this.barButtonItemCancel.Id = 2;
-            this.barButtonItemCancel.LargeGlyph = global::CashDeskManager.V2.Properties.Resources.cancel_32x32;
+            this.barButtonItemCancel.ImageOptions.LargeImage = global::CashDeskManager.V2.Properties.Resources.cancel_32x32;
             this.barButtonItemCancel.Name = "barButtonItemCancel";
             this.barButtonItemCancel.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.barButtonItemCancel_ItemClick);
             // 
@@ -147,10 +147,10 @@
             // 
             // ribbonPageGroup1
             // 
+            this.ribbonPageGroup1.CaptionButtonVisible = DevExpress.Utils.DefaultBoolean.False;
             this.ribbonPageGroup1.ItemLinks.Add(this.barButtonItemSave);
             this.ribbonPageGroup1.ItemLinks.Add(this.barButtonItemCancel);
             this.ribbonPageGroup1.Name = "ribbonPageGroup1";
-            this.ribbonPageGroup1.ShowCaptionButton = false;
             this.ribbonPageGroup1.Text = "İşlemler";
             // 
             // groupControlBase
@@ -166,7 +166,7 @@
             this.groupControlBase.Controls.Add(this.labelControl3);
             this.groupControlBase.Controls.Add(this.labelControl1);
             this.groupControlBase.Dock = System.Windows.Forms.DockStyle.Top;
-            this.groupControlBase.Location = new System.Drawing.Point(0, 95);
+            this.groupControlBase.Location = new System.Drawing.Point(0, 126);
             this.groupControlBase.Name = "groupControlBase";
             this.groupControlBase.Size = new System.Drawing.Size(745, 141);
             this.groupControlBase.TabIndex = 1;
@@ -189,7 +189,7 @@
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
             this.gridLookUpEditPayedFrom.Properties.DataSource = this.cashDeskBindingSource;
             this.gridLookUpEditPayedFrom.Properties.NullText = "Ödemeyi Yapacak Kasayı Seçiniz";
-            this.gridLookUpEditPayedFrom.Properties.View = this.gridLookUpEdit1View;
+            this.gridLookUpEditPayedFrom.Properties.PopupView = this.gridLookUpEdit1View;
             this.gridLookUpEditPayedFrom.Size = new System.Drawing.Size(186, 20);
             this.gridLookUpEditPayedFrom.TabIndex = 5;
             // 
@@ -301,9 +301,9 @@
             this.groupControlExtraInfo.Controls.Add(this.xtraTabControlExtraInfos);
             this.groupControlExtraInfo.Controls.Add(this.panelControl1);
             this.groupControlExtraInfo.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.groupControlExtraInfo.Location = new System.Drawing.Point(0, 236);
+            this.groupControlExtraInfo.Location = new System.Drawing.Point(0, 267);
             this.groupControlExtraInfo.Name = "groupControlExtraInfo";
-            this.groupControlExtraInfo.Size = new System.Drawing.Size(745, 294);
+            this.groupControlExtraInfo.Size = new System.Drawing.Size(745, 300);
             this.groupControlExtraInfo.TabIndex = 2;
             this.groupControlExtraInfo.Text = "Ek Bilgiler";
             // 
@@ -311,10 +311,10 @@
             // 
             this.xtraTabControlExtraInfos.Dock = System.Windows.Forms.DockStyle.Fill;
             this.xtraTabControlExtraInfos.Enabled = false;
-            this.xtraTabControlExtraInfos.Location = new System.Drawing.Point(2, 60);
+            this.xtraTabControlExtraInfos.Location = new System.Drawing.Point(2, 63);
             this.xtraTabControlExtraInfos.Name = "xtraTabControlExtraInfos";
             this.xtraTabControlExtraInfos.SelectedTabPage = this.xtraTabPageCreditCard;
-            this.xtraTabControlExtraInfos.Size = new System.Drawing.Size(741, 232);
+            this.xtraTabControlExtraInfos.Size = new System.Drawing.Size(741, 235);
             this.xtraTabControlExtraInfos.TabIndex = 1;
             this.xtraTabControlExtraInfos.TabPages.AddRange(new DevExpress.XtraTab.XtraTabPage[] {
             this.xtraTabPageCreditCard,
@@ -325,7 +325,8 @@
             this.xtraTabPageCreditCard.Controls.Add(this.textEditCreditBank);
             this.xtraTabPageCreditCard.Controls.Add(this.labelControl6);
             this.xtraTabPageCreditCard.Name = "xtraTabPageCreditCard";
-            this.xtraTabPageCreditCard.Size = new System.Drawing.Size(735, 204);
+            this.xtraTabPageCreditCard.PageVisible = false;
+            this.xtraTabPageCreditCard.Size = new System.Drawing.Size(739, 210);
             this.xtraTabPageCreditCard.Text = "Kredi Kartı Bilgileri";
             // 
             // textEditCreditBank
@@ -361,7 +362,8 @@
             this.xtraTabPageCheck.Controls.Add(this.textEditCheckBank);
             this.xtraTabPageCheck.Controls.Add(this.labelControl7);
             this.xtraTabPageCheck.Name = "xtraTabPageCheck";
-            this.xtraTabPageCheck.Size = new System.Drawing.Size(735, 204);
+            this.xtraTabPageCheck.PageVisible = false;
+            this.xtraTabPageCheck.Size = new System.Drawing.Size(739, 210);
             this.xtraTabPageCheck.Text = "Çek Bilgileri";
             // 
             // dateEditSignDate
@@ -486,7 +488,7 @@
             this.panelControl1.Controls.Add(this.labelControl2);
             this.panelControl1.Controls.Add(this.radioGroupPaymentMethod);
             this.panelControl1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panelControl1.Location = new System.Drawing.Point(2, 20);
+            this.panelControl1.Location = new System.Drawing.Point(2, 23);
             this.panelControl1.Name = "panelControl1";
             this.panelControl1.Size = new System.Drawing.Size(741, 40);
             this.panelControl1.TabIndex = 0;
@@ -522,12 +524,12 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoValidate = System.Windows.Forms.AutoValidate.EnableAllowFocusChange;
-            this.ClientSize = new System.Drawing.Size(745, 530);
+            this.ClientSize = new System.Drawing.Size(745, 567);
             this.Controls.Add(this.groupControlExtraInfo);
             this.Controls.Add(this.groupControlBase);
             this.Controls.Add(this.ribbonControl1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
-            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.IconOptions.Icon = ((System.Drawing.Icon)(resources.GetObject("XtraFormAction.IconOptions.Icon")));
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "XtraFormAction";
