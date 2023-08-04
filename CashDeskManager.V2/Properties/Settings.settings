@@ -2,12 +2,6 @@
 <SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" GeneratedClassNamespace="CashDeskManager.V2.Properties" GeneratedClassName="Settings">
   <Profiles />
   <Settings>
-    <Setting Name="TempLicanse" Type="System.String" Scope="User">
-      <Value Profile="(Default)" />
-    </Setting>
-    <Setting Name="Licanse" Type="System.String" Scope="User">
-      <Value Profile="(Default)" />
-    </Setting>
     <Setting Name="ActiveCashDesk" Type="System.Int32" Scope="User">
       <Value Profile="(Default)">0</Value>
     </Setting>
