@@ -490,6 +490,11 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="calculator.ico" />
+    <None Include="Resources\youtube.png" />
+    <None Include="Resources\twitter.png" />
+    <None Include="Resources\web.png" />
+    <None Include="Resources\linkedinico.png" />
+    <None Include="Resources\web_16x16.png" />
     <None Include="Resources\pc.png" />
     <None Include="Resources\Google.png" />
   </ItemGroup>

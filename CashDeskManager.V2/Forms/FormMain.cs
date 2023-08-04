@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Configuration;
+using System.Diagnostics;
 using System.Globalization;
 using System.Linq;
 using System.Windows.Forms;
@@ -16,9 +17,11 @@ namespace CashDeskManager.V2.Forms
 {
     public partial class FormMain : DevExpress.XtraEditors.XtraForm
     {
-        public FormMain()
+        bool dbConnected;
+        public FormMain(bool dbConnected)
         {
             InitializeComponent();
+            this.dbConnected = dbConnected;
         }
 
         private void accordionControlElementCashDesk_Click(object sender, System.EventArgs e)
@@ -29,6 +32,11 @@ namespace CashDeskManager.V2.Forms
 
         private void ShowNewForm(ref XtraForm form, bool requireCash = true)
         {
+            if (!dbConnected)
+            {
+                return;
+            }
+
             if (requireCash && GlobalVariables.CurrentCashDesk.IsNull())
             {
                 XtraMessageBox.Show("İşlem yapmak için uygun kasa seçilmedi.\n<b>Aktif Kasa Ayarla</b> butonunu kullanarak kasa ayarlayınız.", "Uyarı", MessageBoxButtons.OK,
@@ -82,6 +90,13 @@ namespace CashDeskManager.V2.Forms
 
         private void FormMain_Load(object sender, System.EventArgs e)
         {
+            if (!dbConnected)
+            {
+                accordionControlElement1.Visible = false;
+                accordionControlElement3.Expanded = true;
+                groupControl1.Visible = false;
+                return;
+            }
 
             if (Properties.Settings.Default.ActiveCashDesk == 0)
             {
@@ -254,6 +269,26 @@ namespace CashDeskManager.V2.Forms
         {
             XtraForm formFromOtherCashes = new XtraFormFromOtherCashes();
             ShowNewForm(ref formFromOtherCashes);
+        }
+
+        private void accordionControlElement2_Click(object sender, EventArgs e)
+        {
+            Process.Start("https://saitorhan.com");
+        }
+
+        private void accordionControlElementLinkedIn_Click(object sender, EventArgs e)
+        {
+            Process.Start("https://www.linkedin.com/in/saitorhan/");
+        }
+
+        private void accordionControlElementTwitter_Click(object sender, EventArgs e)
+        {
+            Process.Start("https://www.twitter.com/saitorhan/");
+        }
+
+        private void accordionControlElementYouTube_Click(object sender, EventArgs e)
+        {
+            Process.Start("https://www.youtube.com/saitorhan/");
         }
     }
 }

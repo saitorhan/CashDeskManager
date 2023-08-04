@@ -40,6 +40,12 @@ namespace CashDeskManager.V2
                 if (XtraMessageBox.Show("Veri tabanı oluşturulamadı. Veri tabanı oluşturulmadan sistem kullanılamaz.\nVeri tabanı ayarlarını şimdi yapmak ister misiniz?", "Uyarı",
                         MessageBoxButtons.YesNo, MessageBoxIcon.Question) != DialogResult.Yes)
                 {
+                    if (XtraMessageBox.Show("Geliştiricinin iletişim bilgilerine ulaşmak için uygulamayı işlem ekranları olmadan açmak ister misiniz?", "Bilgi", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+                    {
+                        Application.Run(new FormMain(false));
+                        return;
+                    }
+
                     return;
                 }
 
@@ -47,6 +53,11 @@ namespace CashDeskManager.V2
                 xtraFormMySql.ShowDialog();
                 if (!xtraFormMySql.Result)
                 {
+                    if (XtraMessageBox.Show("Geliştiricinin iletişim bilgilerine ulaşmak için uygulamayı işlem ekranları olmadan açmak ister misiniz?", "Bilgi", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+                    {
+                        Application.Run(new FormMain(false));
+                        return;
+                    }
                     return;
                 }
                 else
@@ -56,7 +67,7 @@ namespace CashDeskManager.V2
             }
 
 
-            Application.Run(new FormMain());
+            Application.Run(new FormMain(true));
         }
 
         private static bool CheckDataBase()
