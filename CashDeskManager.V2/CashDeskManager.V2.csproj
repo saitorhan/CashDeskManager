@@ -10,7 +10,7 @@
     <OutputType>WinExe</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>CashDeskManager.V2</RootNamespace>
-    <AssemblyName>CashDeskManager.V2</AssemblyName>
+    <AssemblyName>Kasa Takip Programı</AssemblyName>
     <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <SccProjectName>SAK</SccProjectName>
