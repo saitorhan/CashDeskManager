@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Configuration;
 using System.Globalization;
 using System.Linq;
 using System.Windows.Forms;
@@ -219,23 +220,34 @@ namespace CashDeskManager.V2.Forms
 
         private void accordionControlElementBackUp_Click(object sender, EventArgs e)
         {
-            string constring = CashDeskContext.DeskContext.Database.Connection.ConnectionString;
-            string file = "C:\\backup.sql";
-            using (MySqlConnection conn = new MySqlConnection(constring))
+            string constring = ConfigurationManager.ConnectionStrings["CashDeskContext"].ConnectionString;
+            xtraSaveFileDialog1.FileName = $"{DateTime.Now:yyyMMdd_HHmmss}.sql";
+            if (xtraSaveFileDialog1.ShowDialog() != DialogResult.OK)
             {
-                using (MySqlCommand cmd = new MySqlCommand())
-                {
-                    //using (MySqlBackup mb = new MySqlBackup(cmd))
-                    //{
-                    //    cmd.Connection = conn;
-                    //    conn.Open();
-                    //    mb.ExportToFile(file);
-                    //    conn.Close();
-                    //}
-                }
+                return;
             }
 
-            MessageBox.Show("Test");
+            using (MySqlConnection conn = new MySqlConnection(constring))
+            {
+                try
+                {
+                    using (MySqlCommand cmd = new MySqlCommand())
+                    {
+                        using (MySqlBackup mb = new MySqlBackup(cmd))
+                        {
+                            cmd.Connection = conn;
+                            conn.Open();
+                            mb.ExportToFile(xtraSaveFileDialog1.FileName);
+                            conn.Close();
+                        }
+                    }
+                    XtraMessageBox.Show("Yedekleme işlemi başarıyla tamamlandı.", "Yedekleme", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
+                catch (Exception exception)
+                {
+                    XtraMessageBox.Show("Yedekleme işlemi başarısız oldu.", "Yedekleme", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+            }
         }
 
         private void accordionControlElementFromOtherCashes_Click(object sender, EventArgs e)
