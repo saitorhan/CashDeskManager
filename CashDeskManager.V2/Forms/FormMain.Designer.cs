@@ -72,7 +72,6 @@
             this.accordionControlElementFixedExpense = new DevExpress.XtraBars.Navigation.AccordionControlElement();
             this.accordionControlElementDebtsCredits = new DevExpress.XtraBars.Navigation.AccordionControlElement();
             this.accordionControlElementCashDeskStatus = new DevExpress.XtraBars.Navigation.AccordionControlElement();
-            this.accordionControlElementBackUp = new DevExpress.XtraBars.Navigation.AccordionControlElement();
             this.accordionControlElementFromOtherCashes = new DevExpress.XtraBars.Navigation.AccordionControlElement();
             this.accordionControlElement3 = new DevExpress.XtraBars.Navigation.AccordionControlElement();
             this.accordionControlElement2 = new DevExpress.XtraBars.Navigation.AccordionControlElement();
@@ -138,7 +137,6 @@
             this.accordionControlElementFixedExpense,
             this.accordionControlElementDebtsCredits,
             this.accordionControlElementCashDeskStatus,
-            this.accordionControlElementBackUp,
             this.accordionControlElementFromOtherCashes});
             this.accordionControlElement1.Expanded = true;
             this.accordionControlElement1.Name = "accordionControlElement1";
@@ -186,13 +184,6 @@
             this.accordionControlElementCashDeskStatus.Text = "Kasa Durumları";
             this.accordionControlElementCashDeskStatus.Visible = false;
             this.accordionControlElementCashDeskStatus.Click += new System.EventHandler(this.accordionControlElementCashDeskStatus_Click);
-            // 
-            // accordionControlElementBackUp
-            // 
-            this.accordionControlElementBackUp.Name = "accordionControlElementBackUp";
-            this.accordionControlElementBackUp.Style = DevExpress.XtraBars.Navigation.ElementStyle.Item;
-            this.accordionControlElementBackUp.Text = "Veri Tabanı Yedekle";
-            this.accordionControlElementBackUp.Click += new System.EventHandler(this.accordionControlElementBackUp_Click);
             // 
             // accordionControlElementFromOtherCashes
             // 
@@ -996,7 +987,6 @@
         private DevExpress.XtraEditors.TileItem tileItemTotalCashOut;
         private DevExpress.XtraEditors.TileItem tileItemTotalCardOut;
         private DevExpress.XtraEditors.TileItem tileItemTotalCheckOut;
-        private DevExpress.XtraBars.Navigation.AccordionControlElement accordionControlElementBackUp;
         private DevExpress.XtraBars.Navigation.AccordionControlElement accordionControlElementFromOtherCashes;
         private DevExpress.XtraEditors.XtraSaveFileDialog xtraSaveFileDialog1;
         private DevExpress.XtraBars.Navigation.AccordionControlElement accordionControlElement3;

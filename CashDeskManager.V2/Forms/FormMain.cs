@@ -11,7 +11,6 @@ using CashDeskManager.V2.Entity.Enums;
 using CashDeskManager.V2.Reports;
 using DevExpress.Utils;
 using DevExpress.XtraEditors;
-using MySql.Data.MySqlClient;
 
 namespace CashDeskManager.V2.Forms
 {
@@ -233,40 +232,10 @@ namespace CashDeskManager.V2.Forms
             #endregion çıkış
         }
 
-        private void accordionControlElementBackUp_Click(object sender, EventArgs e)
-        {
-            string constring = ConfigurationManager.ConnectionStrings["CashDeskContext"].ConnectionString;
-            xtraSaveFileDialog1.FileName = $"{DateTime.Now:yyyMMdd_HHmmss}.sql";
-            if (xtraSaveFileDialog1.ShowDialog() != DialogResult.OK)
-            {
-                return;
-            }
-
-            using (MySqlConnection conn = new MySqlConnection(constring))
-            {
-                try
-                {
-                    using (MySqlCommand cmd = new MySqlCommand())
-                    {
-                        using (MySqlBackup mb = new MySqlBackup(cmd))
-                        {
-                            cmd.Connection = conn;
-                            conn.Open();
-                            mb.ExportToFile(xtraSaveFileDialog1.FileName);
-                            conn.Close();
-                        }
-                    }
-                    XtraMessageBox.Show("Yedekleme işlemi başarıyla tamamlandı.", "Yedekleme", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                }
-                catch (Exception exception)
-                {
-                    XtraMessageBox.Show("Yedekleme işlemi başarısız oldu.", "Yedekleme", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                }
-            }
-        }
 
         private void accordionControlElementFromOtherCashes_Click(object sender, EventArgs e)
         {
+
             XtraForm formFromOtherCashes = new XtraFormFromOtherCashes();
             ShowNewForm(ref formFromOtherCashes);
         }

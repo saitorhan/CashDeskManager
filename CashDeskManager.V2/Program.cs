@@ -48,18 +48,6 @@ namespace CashDeskManager.V2
 
                     return;
                 }
-
-                XtraFormMySqlConnection xtraFormMySql = new XtraFormMySqlConnection();
-                xtraFormMySql.ShowDialog();
-                if (!xtraFormMySql.Result)
-                {
-                    if (XtraMessageBox.Show("Geliştiricinin iletişim bilgilerine ulaşmak için uygulamayı işlem ekranları olmadan açmak ister misiniz?", "Bilgi", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
-                    {
-                        Application.Run(new FormMain(false));
-                        return;
-                    }
-                    return;
-                }
                 else
                 {
                     Application.Restart();

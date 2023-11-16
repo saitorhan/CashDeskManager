@@ -2,12 +2,9 @@
 using System.Data.Entity;
 using CashDeskManager.V2.Entity.Database;
 using CashDeskManager.V2.Migrations;
-using MySql.Data.EntityFramework;
-using MySql.Data.MySqlClient;
 
 namespace CashDeskManager.V2.Entity
 {
-    [DbConfigurationType(typeof(MySqlEFConfiguration))]
     public class CashDeskContext : DbContext
     {
         private static CashDeskContext cashDeskContext;
