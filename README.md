@@ -1,5 +1,5 @@
 # Proje Anasayfası
-![0](https://github.com/saitorhan/CashDeskManager/assets/6633924/77299c7b-3c41-476a-9edd-d9350eeffe60)
+![0](https://github.com/saitorhan/CashDeskManager/assets/6633924/307b09e5-5e2d-46aa-97e7-a733ad14fe19)
 
 ## Kasa Hareketleri
 ![1](https://github.com/saitorhan/CashDeskManager/assets/6633924/336a1a26-8b2f-4489-9c47-032dead7fc2c)
